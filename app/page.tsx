@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { RefreshCw, Search, GripVertical } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { Search, GripVertical, Calendar as CalendarIcon } from 'lucide-react';
 import NewsCard, { NewsItem } from '@/components/NewsCard';
 import styles from './page.module.css';
 
@@ -11,15 +11,29 @@ export default function Dashboard() {
   const [keywordOrder, setKeywordOrder] = useState<string[]>([]);
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
-  const [fetching, setFetching] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  const [availableDates, setAvailableDates] = useState<string[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string>('');
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+  
+  const calendarRef = useRef<HTMLDivElement>(null);
 
-  const loadNews = async (isInitial = false) => {
+  const loadNews = async (isInitial = false, targetDate?: string) => {
     try {
       if (isInitial) setLoading(true);
-      const res = await fetch('/api/news');
+      const url = targetDate ? `/api/news?date=${targetDate}` : '/api/news';
+      const res = await fetch(url);
       const result = await res.json();
       setData(result);
+
+      if (result?.availableDates) {
+        setAvailableDates(result.availableDates);
+      }
+      if (result?.date) {
+        setSelectedDate(result.date);
+      }
 
       // Load actual keyword order from /api/keywords
       const kwRes = await fetch('/api/keywords');
@@ -73,6 +87,28 @@ export default function Dashboard() {
     loadNews(true);
   }, []);
 
+  // Sync calendar focus month to selectedDate when it changes
+  useEffect(() => {
+    if (selectedDate) {
+      setCurrentMonth(new Date(selectedDate));
+    }
+  }, [selectedDate]);
+
+  // Click outside to close calendar popover
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (calendarRef.current && !calendarRef.current.contains(event.target as Node)) {
+        setShowCalendar(false);
+      }
+    }
+    if (showCalendar) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showCalendar]);
+
   // Save selected keywords to localStorage whenever they change
   useEffect(() => {
     // Only write to localStorage after initial selections have been loaded from localStorage to avoid wiping storage
@@ -81,28 +117,9 @@ export default function Dashboard() {
     }
   }, [selectedKeywords, isLoaded]);
 
-  const handleFetchNews = async () => {
-    try {
-      setFetching(true);
-      await fetch('/api/fetch-news', { method: 'POST' });
-      const currentSelection = [...selectedKeywords];
-      await loadNews(false);
-      
-      // Preserve selection if it's not empty, otherwise default to all new keys
-      if (currentSelection.length > 0) {
-        setSelectedKeywords(currentSelection);
-      } else {
-        const res = await fetch('/api/news');
-        const result = await res.json();
-        if (result?.news) {
-          setSelectedKeywords(Object.keys(result.news));
-        }
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setFetching(false);
-    }
+  const handleDateChange = (dateStr: string) => {
+    setSelectedDate(dateStr);
+    loadNews(false, dateStr);
   };
 
   const toggleKeyword = (keyword: string) => {
@@ -161,23 +178,112 @@ export default function Dashboard() {
     }
   };
 
+  const handlePrevMonth = () => {
+    setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
+  };
+
+  const renderCalendarDays = () => {
+    const year = currentMonth.getFullYear();
+    const month = currentMonth.getMonth();
+    
+    const firstDayIndex = new Date(year, month, 1).getDay();
+    const totalDays = new Date(year, month + 1, 0).getDate();
+    
+    const cells = [];
+    
+    // Padding empty cells for days of the week before month starts
+    for (let i = 0; i < firstDayIndex; i++) {
+      cells.push(<div key={`empty-${i}`} className={styles.calendarDayEmpty} />);
+    }
+    
+    // Render each day cell
+    for (let day = 1; day <= totalDays; day++) {
+      const monthStr = String(month + 1).padStart(2, '0');
+      const dayStr = String(day).padStart(2, '0');
+      const dateStr = `${year}-${monthStr}-${dayStr}`;
+      
+      const hasData = availableDates.includes(dateStr);
+      const isSelected = selectedDate === dateStr;
+      
+      cells.push(
+        <button
+          key={dateStr}
+          className={`${styles.calendarDay} ${hasData ? styles.hasData : ''} ${isSelected ? styles.selected : ''}`}
+          disabled={!hasData}
+          onClick={() => {
+            handleDateChange(dateStr);
+            setShowCalendar(false);
+          }}
+          title={!hasData ? 'No intel available' : `View intel for ${dateStr}`}
+        >
+          {day}
+        </button>
+      );
+    }
+    
+    return cells;
+  };
+
   return (
     <div className={`container animate-fade-in ${styles.dashboard}`}>
       <div className={styles.header}>
         <div>
           <h1 className={styles.title}>Your Daily Intel</h1>
           <p className={styles.subtitle}>
-            {data?.date ? `Latest update: ${data.date}` : 'No news fetched yet'}
+            {selectedDate ? (
+              <>
+                Showing Intel for: {selectedDate}{' '}
+                {selectedDate === `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${String(new Date().getDate()).padStart(2, '0')}` && (
+                  <strong>(Today)</strong>
+                )}
+              </>
+            ) : (
+              'No news found'
+            )}
           </p>
         </div>
-        <button 
-          className={`btn ${fetching ? styles.spin : ''}`} 
-          onClick={handleFetchNews}
-          disabled={fetching}
-        >
-          <RefreshCw size={18} />
-          {fetching ? 'Fetching...' : 'Fetch Now'}
-        </button>
+
+        
+        {/* Date Selector Popover (Calendar) */}
+        {availableDates.length > 0 && (
+          <div className={styles.dateSelectorContainer} ref={calendarRef}>
+            <button 
+              className={styles.calendarTriggerBtn}
+              onClick={() => setShowCalendar(!showCalendar)}
+            >
+              <CalendarIcon size={16} />
+              <span>
+                {selectedDate 
+                  ? new Date(selectedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) 
+                  : 'Select Date'}
+              </span>
+            </button>
+            
+            {showCalendar && (
+              <div className={styles.calendarPopover}>
+                <div className={styles.calendarHeader}>
+                  <button className={styles.calNavBtn} onClick={handlePrevMonth}>&lt;</button>
+                  <span className={styles.calendarMonthName}>
+                    {currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </span>
+                  <button className={styles.calNavBtn} onClick={handleNextMonth}>&gt;</button>
+                </div>
+                <div className={styles.calendarWeekdays}>
+                  {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map(day => (
+                    <div key={day} className={styles.weekday}>{day}</div>
+                  ))}
+                </div>
+                <div className={styles.calendarDaysGrid}>
+                  {renderCalendarDays()}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {loading ? (
@@ -186,7 +292,7 @@ export default function Dashboard() {
         <div className={styles.emptyState}>
           <Search size={48} className={styles.emptyIcon} />
           <h2>No data found</h2>
-          <p>Add keywords in settings and click Fetch Now.</p>
+          <p>Please check schedule task configuration or add keywords in settings.</p>
         </div>
       ) : (
         <div className={styles.layout}>
