@@ -6,6 +6,10 @@ const appApiDir = path.join(process.cwd(), 'app', 'api');
 const tempApiDir = path.join(process.cwd(), 'api_temp');
 const nextDir = path.join(process.cwd(), '.next');
 
+console.log('Build configuration:');
+console.log('- NEXT_PUBLIC_BASE_PATH:', process.env.NEXT_PUBLIC_BASE_PATH || '(not set)');
+console.log('- NEXT_PUBLIC_STATIC_MODE:', process.env.NEXT_PUBLIC_STATIC_MODE || '(not set)');
+
 // 1. Clean the .next cache directory to avoid stale type validation errors
 if (fs.existsSync(nextDir)) {
   console.log('Cleaning .next directory...');
@@ -23,7 +27,8 @@ if (fs.existsSync(appApiDir)) {
     fs.renameSync(appApiDir, tempApiDir);
     moved = true;
   } catch (err) {
-    console.error('Error: Failed to move app/api folder:', err.message);
+    console.error('\nError: Failed to move app/api folder:', err.message);
+    console.error('Tip: This usually happens on Windows if the Next.js dev server (npm run dev) is still running and locking the directory. Please stop the dev server and try building again.\n');
     process.exit(1);
   }
 }
