@@ -1,65 +1,222 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { useEffect, useState } from 'react';
+import { RefreshCw, Search, GripVertical } from 'lucide-react';
+import NewsCard, { NewsItem } from '@/components/NewsCard';
+import styles from './page.module.css';
+
+export default function Dashboard() {
+  const [data, setData] = useState<{ date: string | null; news: Record<string, NewsItem[]> } | null>(null);
+  const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
+  const [keywordOrder, setKeywordOrder] = useState<string[]>([]);
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [fetching, setFetching] = useState(false);
+
+  const loadNews = async (isInitial = false) => {
+    try {
+      if (isInitial) setLoading(true);
+      const res = await fetch('/api/news');
+      const result = await res.json();
+      setData(result);
+      if (result?.news && isInitial) {
+        setSelectedKeywords(Object.keys(result.news));
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      if (isInitial) setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadNews(true);
+  }, []);
+
+  // Sync keywordOrder whenever data changes
+  useEffect(() => {
+    if (data?.news) {
+      const keys = Object.keys(data.news);
+      setKeywordOrder(prev => {
+        if (prev.length > 0) {
+          // Keep existing order but filter out deleted keys and append new keys
+          const filteredPrev = prev.filter(k => keys.includes(k));
+          const newKeys = keys.filter(k => !prev.includes(k));
+          return [...filteredPrev, ...newKeys];
+        }
+        return keys;
+      });
+    }
+  }, [data]);
+
+  const handleFetchNews = async () => {
+    try {
+      setFetching(true);
+      await fetch('/api/fetch-news', { method: 'POST' });
+      const currentSelection = [...selectedKeywords];
+      await loadNews(false);
+      
+      // Preserve selection if it's not empty, otherwise default to all new keys
+      if (currentSelection.length > 0) {
+        setSelectedKeywords(currentSelection);
+      } else {
+        const res = await fetch('/api/news');
+        const result = await res.json();
+        if (result?.news) {
+          setSelectedKeywords(Object.keys(result.news));
+        }
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setFetching(false);
+    }
+  };
+
+  const toggleKeyword = (keyword: string) => {
+    setSelectedKeywords(prev => 
+      prev.includes(keyword) 
+        ? prev.filter(k => k !== keyword) 
+        : [...prev, keyword]
+    );
+  };
+
+  const handleSelectAll = () => {
+    if (data?.news) {
+      setSelectedKeywords(Object.keys(data.news));
+    }
+  };
+
+  const handleSelectNone = () => {
+    setSelectedKeywords([]);
+  };
+
+  // Drag and Drop handlers
+  const handleDragStart = (e: React.DragEvent, index: number) => {
+    setDraggedIndex(index);
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', index.toString());
+  };
+
+  const handleDragOver = (e: React.DragEvent, index: number) => {
+    e.preventDefault();
+    if (draggedIndex === null || draggedIndex === index) return;
+    
+    const newOrder = [...keywordOrder];
+    const draggedItem = newOrder[draggedIndex];
+    
+    // Swap in state for real-time visual swap while dragging
+    newOrder.splice(draggedIndex, 1);
+    newOrder.splice(index, 0, draggedItem);
+    
+    setDraggedIndex(index);
+    setKeywordOrder(newOrder);
+  };
+
+  const handleDragEnd = () => {
+    setDraggedIndex(null);
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className={`container animate-fade-in ${styles.dashboard}`}>
+      <div className={styles.header}>
+        <div>
+          <h1 className={styles.title}>Your Daily Intel</h1>
+          <p className={styles.subtitle}>
+            {data?.date ? `Latest update: ${data.date}` : 'No news fetched yet'}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <button 
+          className={`btn ${fetching ? styles.spin : ''}`} 
+          onClick={handleFetchNews}
+          disabled={fetching}
+        >
+          <RefreshCw size={18} />
+          {fetching ? 'Fetching...' : 'Fetch Now'}
+        </button>
+      </div>
+
+      {loading ? (
+        <div className={styles.loading}>Loading your intel...</div>
+      ) : !data || Object.keys(data.news).length === 0 ? (
+        <div className={styles.emptyState}>
+          <Search size={48} className={styles.emptyIcon} />
+          <h2>No data found</h2>
+          <p>Add keywords in settings and click Fetch Now.</p>
         </div>
-      </main>
+      ) : (
+        <div className={styles.layout}>
+          {/* Filter Sidebar */}
+          <aside className={styles.sidebar}>
+            <div className={styles.sidebarHeader}>
+              <h3 className={styles.sidebarTitle}>Filter Topics</h3>
+            </div>
+            <div className={styles.quickActions}>
+              <button className={styles.actionBtn} onClick={handleSelectAll}>Select All</button>
+              <button className={styles.actionBtn} onClick={handleSelectNone}>Clear All</button>
+            </div>
+            <div className={styles.filterList}>
+              {keywordOrder.map((keyword, index) => (
+                <div 
+                  key={keyword} 
+                  className={`${styles.filterItem} ${selectedKeywords.includes(keyword) ? styles.active : ''} ${draggedIndex === index ? styles.dragging : ''}`}
+                  draggable
+                  onDragStart={(e) => handleDragStart(e, index)}
+                  onDragOver={(e) => handleDragOver(e, index)}
+                  onDragEnd={handleDragEnd}
+                >
+                  <div className={styles.dragHandle}>
+                    <GripVertical size={16} />
+                  </div>
+                  <div 
+                    className={styles.itemClickArea}
+                    onClick={() => toggleKeyword(keyword)}
+                  >
+                    <div className={styles.checkbox}>
+                      {selectedKeywords.includes(keyword) && <div className={styles.checkedDot} />}
+                    </div>
+                    <span className={styles.filterText}>{keyword}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          {/* Main Content */}
+          <main className={styles.mainContent}>
+            {selectedKeywords.length === 0 ? (
+              <div className={styles.emptyFilterState}>
+                <Search size={32} className={styles.emptyFilterIcon} />
+                <p>No topics selected. Select at least one topic from the sidebar to view news.</p>
+              </div>
+            ) : (
+              <div className={styles.keywordSections}>
+                {keywordOrder
+                  .filter((keyword) => selectedKeywords.includes(keyword))
+                  .map((keyword) => {
+                    const items = data.news[keyword] || [];
+                    return (
+                      <section key={keyword} className={styles.section}>
+                        <h2 className={styles.sectionTitle}>
+                          <span className={styles.hash}>#</span> {keyword}
+                        </h2>
+                        {items.length === 0 ? (
+                          <p className={styles.noItems}>No recent news for this keyword.</p>
+                        ) : (
+                          <div className={styles.grid}>
+                            {items.map((item, idx) => (
+                              <NewsCard key={idx} item={item} />
+                            ))}
+                          </div>
+                        )}
+                      </section>
+                    );
+                  })}
+              </div>
+            )}
+          </main>
+        </div>
+      )}
     </div>
   );
 }
