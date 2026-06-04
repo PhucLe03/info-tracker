@@ -58,11 +58,21 @@ Info Tracker is a premium web-based information and news tracking dashboard. It 
 
 ## Scheduling Automated Tasks
 
-To keep your news feed updated automatically, configure a task scheduler (such as **Antigravity Tasks** or a cron job) to trigger the fetch API on a weekly or daily schedule.
+To keep your news feed updated automatically, configure a task scheduler (such as **Antigravity Tasks** or a cron job) to run the fetch operation on a weekly or daily schedule.
 
-### Trigger Endpoint Command
+### Option 1: Standalone Offline Script (Recommended)
+
+You can run the fetch operation directly from the command line without needing the Next.js web server running. This is the most reliable option for automated tasks:
+
+```bash
+node scripts/fetch-news.mjs
+```
+
+### Option 2: HTTP API Request
+
+If your web app is always running, you can send an HTTP POST request to trigger the API endpoint:
+
 ```bash
 curl -X POST http://localhost:3000/api/fetch-news
 ```
 
-*Note: The Next.js web application must be running when the request is sent.*
