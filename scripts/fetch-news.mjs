@@ -8,7 +8,7 @@ function isVietnamese(text) {
 }
 
 async function run() {
-  const dataDir = path.join(process.cwd(), 'data');
+  const dataDir = path.join(process.cwd(), 'public', 'data');
   const keywordsFile = path.join(dataDir, 'keywords.json');
   const newsDir = path.join(dataDir, 'news');
 
@@ -67,11 +67,21 @@ async function run() {
     }
   }
 
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
   const outputFile = path.join(newsDir, `${today}.json`);
   
   fs.writeFileSync(outputFile, JSON.stringify(newsResults, null, 2));
   console.log(`Successfully saved today's intel to: ${outputFile}`);
+
+  // Update news/summary.json with available dates
+  const files = fs.readdirSync(newsDir).filter(file => file.endsWith('.json') && file !== 'summary.json');
+  const availableDates = files
+    .map(file => file.replace('.json', ''))
+    .sort((a, b) => b.localeCompare(a));
+  
+  const summaryFile = path.join(newsDir, 'summary.json');
+  fs.writeFileSync(summaryFile, JSON.stringify({ availableDates }, null, 2));
+  console.log(`Successfully updated news summary at: ${summaryFile}`);
 }
 
 run().catch(console.error);

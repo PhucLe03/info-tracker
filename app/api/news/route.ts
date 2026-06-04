@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const dataDir = path.join(process.cwd(), 'data');
+const dataDir = path.join(process.cwd(), 'public', 'data');
 const newsDir = path.join(dataDir, 'news');
 
 export async function GET(request: Request) {
@@ -11,7 +11,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ date: null, availableDates: [], news: {} });
     }
 
-    const files = fs.readdirSync(newsDir).filter(file => file.endsWith('.json'));
+    const files = fs.readdirSync(newsDir).filter(file => file.endsWith('.json') && file !== 'summary.json');
     
     if (files.length === 0) {
       return NextResponse.json({ date: null, availableDates: [], news: {} });

@@ -5,6 +5,11 @@ import { Search, GripVertical, Calendar as CalendarIcon } from 'lucide-react';
 import NewsCard, { NewsItem } from '@/components/NewsCard';
 import styles from './page.module.css';
 
+const isStaticMode = typeof window !== 'undefined' && (
+  window.location.hostname.endsWith('github.io') || 
+  process.env.NEXT_PUBLIC_STATIC_MODE === 'true'
+);
+
 export default function Dashboard() {
   const [data, setData] = useState<{ date: string | null; news: Record<string, NewsItem[]> } | null>(null);
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
@@ -23,39 +28,76 @@ export default function Dashboard() {
   const loadNews = async (isInitial = false, targetDate?: string) => {
     try {
       if (isInitial) setLoading(true);
-      const url = targetDate ? `/api/news?date=${targetDate}` : '/api/news';
-      const res = await fetch(url);
-      const result = await res.json();
-      setData(result);
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-      if (result?.availableDates) {
-        setAvailableDates(result.availableDates);
-      }
-      if (result?.date) {
-        setSelectedDate(result.date);
+      let dates: string[] = [];
+      let currentSelectedDate: string | null = null;
+      let newsData: Record<string, NewsItem[]> = {};
+
+      try {
+        const summaryUrl = `${basePath}/data/news/summary.json`;
+        const summaryRes = await fetch(summaryUrl);
+        if (summaryRes.ok) {
+          const summary = await summaryRes.json();
+          dates = summary.availableDates || [];
+          setAvailableDates(dates);
+        }
+      } catch (err) {
+        console.warn('Could not load news summary:', err);
       }
 
-      // Load actual keyword order from /api/keywords
-      const kwRes = await fetch('/api/keywords');
-      const kwList: string[] = await kwRes.json();
+      const dateToLoad = targetDate || dates[0];
+      if (dateToLoad) {
+        currentSelectedDate = dateToLoad;
+        setSelectedDate(dateToLoad);
+        
+        try {
+          const newsUrl = `${basePath}/data/news/${dateToLoad}.json`;
+          const newsRes = await fetch(newsUrl);
+          if (newsRes.ok) {
+            newsData = await newsRes.json();
+          }
+        } catch (err) {
+          console.warn(`Could not load news for date ${dateToLoad}:`, err);
+        }
+      }
+
+      setData({ date: currentSelectedDate, news: newsData });
+
+      // Load actual keyword order from public keywords.json or localStorage
+      let kwList: string[] = [];
+      const localOrder = localStorage.getItem('localKeywordOrder');
+      if (localOrder) {
+        try {
+          kwList = JSON.parse(localOrder);
+        } catch (e) {}
+      }
+
+      if (!kwList || kwList.length === 0) {
+        try {
+          const keywordsUrl = `${basePath}/data/keywords.json`;
+          const kwRes = await fetch(keywordsUrl);
+          if (kwRes.ok) {
+            kwList = await kwRes.json();
+          }
+        } catch (err) {
+          console.warn('Could not load keywords:', err);
+        }
+      }
 
       if (kwList && Array.isArray(kwList)) {
-        if (result?.news) {
-          const fetchedKeys = Object.keys(result.news);
-          // Keep keywords from the saved order if they exist in the fetched news
-          const orderedKeys = kwList.filter(k => fetchedKeys.includes(k));
-          // Append any extra keys that might not be in the saved order yet
-          const extraKeys = fetchedKeys.filter(k => !kwList.includes(k));
-          setKeywordOrder([...orderedKeys, ...extraKeys]);
-        } else {
-          setKeywordOrder(kwList);
-        }
-      } else if (result?.news) {
-        setKeywordOrder(Object.keys(result.news));
+        const fetchedKeys = Object.keys(newsData);
+        // Keep keywords from the saved order if they exist in the fetched news
+        const orderedKeys = kwList.filter(k => fetchedKeys.includes(k));
+        // Append any extra keys that might not be in the saved order yet
+        const extraKeys = fetchedKeys.filter(k => !kwList.includes(k));
+        setKeywordOrder([...orderedKeys, ...extraKeys]);
+      } else {
+        setKeywordOrder(Object.keys(newsData));
       }
 
       if (isInitial) {
-        const fetchedKeys = result?.news ? Object.keys(result.news) : [];
+        const fetchedKeys = Object.keys(newsData);
         // Load selected keywords from localStorage if exists
         const saved = localStorage.getItem('selectedKeywords');
         if (saved) {
@@ -164,9 +206,14 @@ export default function Dashboard() {
 
   const handleDragEnd = async () => {
     setDraggedIndex(null);
+    if (isStaticMode) {
+      localStorage.setItem('localKeywordOrder', JSON.stringify(keywordOrder));
+      return;
+    }
     try {
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
       // Save the new keyword order to local keywords.json via PUT API
-      await fetch('/api/keywords', {
+      await fetch(`${basePath}/api/keywords`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

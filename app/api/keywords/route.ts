@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const dataDir = path.join(process.cwd(), 'data');
+const dataDir = path.join(process.cwd(), 'public', 'data');
 const keywordsFile = path.join(dataDir, 'keywords.json');
 
 export async function GET() {

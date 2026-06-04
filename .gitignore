@@ -41,5 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # local data
-/data/news/
-/data/keywords.json
+/public/data/news/
+
+# environment
+*.env
