@@ -66,3 +66,18 @@ export async function DELETE(request: Request) {
     return NextResponse.json({ error: 'Failed to delete keyword' }, { status: 500 });
   }
 }
+
+export async function PUT(request: Request) {
+  try {
+    const { keywords } = await request.json();
+    if (!Array.isArray(keywords)) {
+      return NextResponse.json({ error: 'Keywords must be an array' }, { status: 400 });
+    }
+
+    fs.writeFileSync(keywordsFile, JSON.stringify(keywords, null, 2));
+    return NextResponse.json(keywords);
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to update keyword order' }, { status: 500 });
+  }
+}
+

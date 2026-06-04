@@ -12,6 +12,7 @@ export default function Dashboard() {
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const [fetching, setFetching] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const loadNews = async (isInitial = false) => {
     try {
@@ -19,8 +20,47 @@ export default function Dashboard() {
       const res = await fetch('/api/news');
       const result = await res.json();
       setData(result);
-      if (result?.news && isInitial) {
-        setSelectedKeywords(Object.keys(result.news));
+
+      // Load actual keyword order from /api/keywords
+      const kwRes = await fetch('/api/keywords');
+      const kwList: string[] = await kwRes.json();
+
+      if (kwList && Array.isArray(kwList)) {
+        if (result?.news) {
+          const fetchedKeys = Object.keys(result.news);
+          // Keep keywords from the saved order if they exist in the fetched news
+          const orderedKeys = kwList.filter(k => fetchedKeys.includes(k));
+          // Append any extra keys that might not be in the saved order yet
+          const extraKeys = fetchedKeys.filter(k => !kwList.includes(k));
+          setKeywordOrder([...orderedKeys, ...extraKeys]);
+        } else {
+          setKeywordOrder(kwList);
+        }
+      } else if (result?.news) {
+        setKeywordOrder(Object.keys(result.news));
+      }
+
+      if (isInitial) {
+        const fetchedKeys = result?.news ? Object.keys(result.news) : [];
+        // Load selected keywords from localStorage if exists
+        const saved = localStorage.getItem('selectedKeywords');
+        if (saved) {
+          try {
+            const parsed = JSON.parse(saved);
+            if (Array.isArray(parsed)) {
+              // Intersect to filter out keywords that are no longer fetched
+              const validKeys = parsed.filter(k => fetchedKeys.includes(k));
+              setSelectedKeywords(validKeys);
+              setIsLoaded(true);
+              return;
+            }
+          } catch (e) {
+            console.error('Failed to parse selected keywords from localStorage', e);
+          }
+        }
+        // Fallback to select all if nothing in localStorage
+        setSelectedKeywords(fetchedKeys);
+        setIsLoaded(true);
       }
     } catch (err) {
       console.error(err);
@@ -33,21 +73,13 @@ export default function Dashboard() {
     loadNews(true);
   }, []);
 
-  // Sync keywordOrder whenever data changes
+  // Save selected keywords to localStorage whenever they change
   useEffect(() => {
-    if (data?.news) {
-      const keys = Object.keys(data.news);
-      setKeywordOrder(prev => {
-        if (prev.length > 0) {
-          // Keep existing order but filter out deleted keys and append new keys
-          const filteredPrev = prev.filter(k => keys.includes(k));
-          const newKeys = keys.filter(k => !prev.includes(k));
-          return [...filteredPrev, ...newKeys];
-        }
-        return keys;
-      });
+    // Only write to localStorage after initial selections have been loaded from localStorage to avoid wiping storage
+    if (isLoaded) {
+      localStorage.setItem('selectedKeywords', JSON.stringify(selectedKeywords));
     }
-  }, [data]);
+  }, [selectedKeywords, isLoaded]);
 
   const handleFetchNews = async () => {
     try {
@@ -113,8 +145,20 @@ export default function Dashboard() {
     setKeywordOrder(newOrder);
   };
 
-  const handleDragEnd = () => {
+  const handleDragEnd = async () => {
     setDraggedIndex(null);
+    try {
+      // Save the new keyword order to local keywords.json via PUT API
+      await fetch('/api/keywords', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ keywords: keywordOrder })
+      });
+    } catch (err) {
+      console.error('Failed to save keyword order:', err);
+    }
   };
 
   return (
@@ -165,9 +209,6 @@ export default function Dashboard() {
                   onDragOver={(e) => handleDragOver(e, index)}
                   onDragEnd={handleDragEnd}
                 >
-                  <div className={styles.dragHandle}>
-                    <GripVertical size={16} />
-                  </div>
                   <div 
                     className={styles.itemClickArea}
                     onClick={() => toggleKeyword(keyword)}
@@ -176,6 +217,9 @@ export default function Dashboard() {
                       {selectedKeywords.includes(keyword) && <div className={styles.checkedDot} />}
                     </div>
                     <span className={styles.filterText}>{keyword}</span>
+                  </div>
+                  <div className={styles.dragHandle}>
+                    <GripVertical size={16} />
                   </div>
                 </div>
               ))}
