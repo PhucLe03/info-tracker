@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  ...(process.env.NEXT_PUBLIC_STATIC_MODE === 'true' ? { output: 'export' } : {}),
   images: {
     unoptimized: true,
   },

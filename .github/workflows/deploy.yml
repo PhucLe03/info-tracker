@@ -38,6 +38,8 @@ jobs:
         run: npm ci
 
       - name: Fetch News Intel
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
         run: node scripts/fetch-news.mjs
 
       - name: Commit and Push News Data

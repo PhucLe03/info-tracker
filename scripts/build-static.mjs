@@ -33,12 +33,13 @@ if (fs.existsSync(appApiDir)) {
   }
 }
 
+let buildFailed = false;
 try {
   console.log('Running next build...');
-  execSync('npx next build', { stdio: 'inherit' });
+  execSync('npx next build', { stdio: 'inherit', shell: true });
 } catch (err) {
   console.error('Build execution failed:', err.message);
-  process.exit(1);
+  buildFailed = true;
 } finally {
   if (moved && fs.existsSync(tempApiDir)) {
     console.log('Restoring app/api from api_temp...');
@@ -49,4 +50,8 @@ try {
       process.exit(1);
     }
   }
+}
+
+if (buildFailed) {
+  process.exit(1);
 }

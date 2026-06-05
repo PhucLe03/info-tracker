@@ -34,54 +34,88 @@ export default function Dashboard() {
       let currentSelectedDate: string | null = null;
       let newsData: Record<string, NewsItem[]> = {};
 
-      try {
-        const summaryUrl = `${basePath}/data/news/summary.json`;
-        const summaryRes = await fetch(summaryUrl);
-        if (summaryRes.ok) {
-          const summary = await summaryRes.json();
-          dates = summary.availableDates || [];
-          setAvailableDates(dates);
-        }
-      } catch (err) {
-        console.warn('Could not load news summary:', err);
-      }
-
-      const dateToLoad = targetDate || dates[0];
-      if (dateToLoad) {
-        currentSelectedDate = dateToLoad;
-        setSelectedDate(dateToLoad);
-        
+      if (isStaticMode) {
         try {
-          const newsUrl = `${basePath}/data/news/${dateToLoad}.json`;
-          const newsRes = await fetch(newsUrl);
-          if (newsRes.ok) {
-            newsData = await newsRes.json();
+          const summaryUrl = `${basePath}/data/news/summary.json`;
+          const summaryRes = await fetch(summaryUrl);
+          if (summaryRes.ok) {
+            const summary = await summaryRes.json();
+            dates = summary.availableDates || [];
+            setAvailableDates(dates);
           }
         } catch (err) {
-          console.warn(`Could not load news for date ${dateToLoad}:`, err);
+          console.warn('Could not load news summary:', err);
+        }
+
+        const dateToLoad = targetDate || dates[0];
+        if (dateToLoad) {
+          currentSelectedDate = dateToLoad;
+          setSelectedDate(dateToLoad);
+          
+          try {
+            const newsUrl = `${basePath}/data/news/${dateToLoad}.json`;
+            const newsRes = await fetch(newsUrl);
+            if (newsRes.ok) {
+              newsData = await newsRes.json();
+            }
+          } catch (err) {
+            console.warn(`Could not load news for date ${dateToLoad}:`, err);
+          }
+        }
+      } else {
+        try {
+          const url = targetDate 
+            ? `${basePath}/api/news?date=${targetDate}` 
+            : `${basePath}/api/news`;
+          const res = await fetch(url);
+          if (res.ok) {
+            const result = await res.json();
+            dates = result.availableDates || [];
+            currentSelectedDate = result.date;
+            newsData = result.news || {};
+            setAvailableDates(dates);
+            if (currentSelectedDate) {
+              setSelectedDate(currentSelectedDate);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to load news from API:', err);
         }
       }
 
       setData({ date: currentSelectedDate, news: newsData });
 
-      // Load actual keyword order from public keywords.json or localStorage
+      // Load actual keyword order from public keywords.json, localStorage or API
       let kwList: string[] = [];
       const localOrder = localStorage.getItem('localKeywordOrder');
       if (localOrder) {
         try {
           kwList = JSON.parse(localOrder);
-        } catch (e) {}
+        } catch {
+          // Ignore error
+        }
       }
 
       if (!kwList || kwList.length === 0) {
-        try {
-          const keywordsUrl = `${basePath}/data/keywords.json`;
-          const kwRes = await fetch(keywordsUrl);
-          if (kwRes.ok) {
-            kwList = await kwRes.json();
+        if (isStaticMode) {
+          try {
+            const keywordsUrl = `${basePath}/data/keywords.json`;
+            const kwRes = await fetch(keywordsUrl);
+            if (kwRes.ok) {
+              kwList = await kwRes.json();
+            }
+          } catch (err) {
+            console.warn('Could not load keywords:', err);
           }
-        } catch (err) {
-          console.warn('Could not load keywords:', err);
+        } else {
+          try {
+            const kwRes = await fetch(`${basePath}/api/keywords`);
+            if (kwRes.ok) {
+              kwList = await kwRes.json();
+            }
+          } catch (err) {
+            console.warn('Could not load keywords from API:', err);
+          }
         }
       }
 
@@ -126,13 +160,19 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    loadNews(true);
+    const timer = setTimeout(() => {
+      loadNews(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   // Sync calendar focus month to selectedDate when it changes
   useEffect(() => {
     if (selectedDate) {
-      setCurrentMonth(new Date(selectedDate));
+      const timer = setTimeout(() => {
+        setCurrentMonth(new Date(selectedDate));
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [selectedDate]);
 

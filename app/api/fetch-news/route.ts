@@ -2,29 +2,66 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import Parser from 'rss-parser';
+import { getDb } from '@/lib/mongodb';
 
 const dataDir = path.join(process.cwd(), 'public', 'data');
 const keywordsFile = path.join(dataDir, 'keywords.json');
 const newsDir = path.join(dataDir, 'news');
 
+const isMongoEnabled = !!process.env.MONGODB_URI;
+
+interface KeywordListDoc {
+  _id: string;
+  keywords: string[];
+}
+
+interface NewsItem {
+  title: string;
+  link: string;
+  pubDate: string;
+  snippet: string;
+  thumbnail: string | null;
+  source: string;
+}
+
+interface NewsDoc {
+  _id: string;
+  date: string;
+  news: Record<string, NewsItem[]>;
+  createdAt: Date;
+}
+
 export async function POST() {
   try {
-    if (!fs.existsSync(keywordsFile)) {
-      return NextResponse.json({ error: 'No keywords found' }, { status: 400 });
-    }
+    let keywords: string[] = [];
 
-    if (!fs.existsSync(newsDir)) {
-      fs.mkdirSync(newsDir, { recursive: true });
+    if (isMongoEnabled) {
+      const db = await getDb();
+      const doc = await db.collection<KeywordListDoc>('keywords').findOne({ _id: 'list' });
+      if (doc && Array.isArray(doc.keywords)) {
+        keywords = doc.keywords;
+      } else if (fs.existsSync(keywordsFile)) {
+        // Fallback to local files during migration
+        try {
+          const data = fs.readFileSync(keywordsFile, 'utf-8');
+          keywords = JSON.parse(data);
+        } catch {
+          // Ignore error
+        }
+      }
+    } else {
+      if (!fs.existsSync(keywordsFile)) {
+        return NextResponse.json({ error: 'No keywords found' }, { status: 400 });
+      }
+      const data = fs.readFileSync(keywordsFile, 'utf-8');
+      keywords = JSON.parse(data);
     }
-
-    const data = fs.readFileSync(keywordsFile, 'utf-8');
-    const keywords: string[] = JSON.parse(data);
 
     if (keywords.length === 0) {
       return NextResponse.json({ message: 'Keywords list is empty' });
     }
 
-    const newsResults: Record<string, any[]> = {};
+    const newsResults: Record<string, NewsItem[]> = {};
     const parser = new Parser();
     const viRegex = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i;
 
@@ -38,7 +75,7 @@ export async function POST() {
         }
 
         const feed = await parser.parseURL(url);
-        const results = (feed.items || []).map((item: any) => {
+        const results = (feed.items || []).map((item: Parser.Item) => {
           // Parse clean title and source from item.title
           const parts = (item.title || '').split(' - ');
           const source = parts.length > 1 ? parts.pop()?.trim() || 'Google News' : 'Google News';
@@ -63,28 +100,45 @@ export async function POST() {
     }
 
     const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
-    const outputFile = path.join(newsDir, `${today}.json`);
-    
-    fs.writeFileSync(outputFile, JSON.stringify(newsResults, null, 2));
 
-    // Update news/summary.json with available dates
-    const files = fs.readdirSync(newsDir).filter(file => file.endsWith('.json') && file !== 'summary.json');
-    const availableDates = files
-      .map(file => file.replace('.json', ''))
-      .sort((a, b) => b.localeCompare(a));
-    
-    const summaryFile = path.join(newsDir, 'summary.json');
-    fs.writeFileSync(summaryFile, JSON.stringify({ availableDates }, null, 2));
+    if (isMongoEnabled) {
+      const db = await getDb();
+      await db.collection<NewsDoc>('news').updateOne(
+        { _id: today },
+        { $set: { news: newsResults, date: today, createdAt: new Date() } },
+        { upsert: true }
+      );
 
-    return NextResponse.json({ 
-      message: 'News fetched successfully', 
-      date: today,
-      stats: Object.keys(newsResults).map(k => ({ keyword: k, count: newsResults[k].length }))
-    });
+      return NextResponse.json({ 
+        message: 'News fetched and saved to MongoDB successfully', 
+        date: today,
+        stats: Object.keys(newsResults).map(k => ({ keyword: k, count: newsResults[k].length }))
+      });
+    } else {
+      if (!fs.existsSync(newsDir)) {
+        fs.mkdirSync(newsDir, { recursive: true });
+      }
+
+      const outputFile = path.join(newsDir, `${today}.json`);
+      fs.writeFileSync(outputFile, JSON.stringify(newsResults, null, 2));
+
+      // Update news/summary.json with available dates
+      const files = fs.readdirSync(newsDir).filter(file => file.endsWith('.json') && file !== 'summary.json');
+      const availableDates = files
+        .map(file => file.replace('.json', ''))
+        .sort((a, b) => b.localeCompare(a));
+      
+      const summaryFile = path.join(newsDir, 'summary.json');
+      fs.writeFileSync(summaryFile, JSON.stringify({ availableDates }, null, 2));
+
+      return NextResponse.json({ 
+        message: 'News fetched and saved to files successfully', 
+        date: today,
+        stats: Object.keys(newsResults).map(k => ({ keyword: k, count: newsResults[k].length }))
+      });
+    }
   } catch (error) {
     console.error('Fetch error:', error);
     return NextResponse.json({ error: 'Failed to fetch news' }, { status: 500 });
   }
 }
-
-

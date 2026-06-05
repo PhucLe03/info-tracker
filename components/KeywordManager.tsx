@@ -14,24 +14,23 @@ export default function KeywordManager() {
   const [adding, setAdding] = useState(false);
   const [deleting, setDeleting] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchKeywords();
-  }, []);
-
   const fetchKeywords = async () => {
     try {
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const res = await fetch(`${basePath}/data/keywords.json`);
-      if (res.ok) {
-        const data = await res.json();
-        setKeywords(data);
-      } else {
-        // Fallback to API if static file not available (e.g. initial setup)
-        const apiRes = await fetch(`${basePath}/api/keywords`);
-        if (apiRes.ok) {
-          const data = await apiRes.json();
+      if (isStaticMode) {
+        const res = await fetch(`${basePath}/data/keywords.json`);
+        if (res.ok) {
+          const data = await res.json();
           setKeywords(data);
+          return;
         }
+      }
+
+      // Dynamic mode or fallback
+      const apiRes = await fetch(`${basePath}/api/keywords`);
+      if (apiRes.ok) {
+        const data = await apiRes.json();
+        setKeywords(data);
       }
     } catch (err) {
       console.error('Error fetching keywords:', err);
@@ -39,6 +38,13 @@ export default function KeywordManager() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fetchKeywords();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
