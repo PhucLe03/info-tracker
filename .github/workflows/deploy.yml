@@ -1,32 +1,17 @@
-name: Deploy InfoTracker to GitHub Pages
+name: Build and Deploy App
 
 on:
-  schedule:
-    # Run daily at 00:00 UTC (07:00 Hanoi time)
-    - cron: '0 0 * * *'
   push:
     branches:
       - master
   workflow_dispatch:
 
-# Allow permissions required to commit changes and deploy to GitHub Pages
-permissions:
-  contents: write
-
-# Limit to one concurrent deployment
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
-  fetch-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          # Fetch all history so we can push back to the branch
-          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -37,43 +22,9 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Fetch News Intel
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        run: node scripts/fetch-news.mjs
+      - name: Build Next.js App
+        # Run next build directly to compile route handlers and pages for dynamic hosting (e.g. Vercel)
+        run: npx next build
 
-      - name: Commit and Push News Data
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add -f public/data/news/
-          
-          # Check if there are modified/new news files
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: auto-fetch daily news intel [skip ci]"
-            git push origin master
-          else
-            echo "No new news data to commit."
-          fi
-
-      - name: Determine Next.js Base Path
-        id: base-path
-        run: |
-          REPO_NAME="${{ github.event.repository.name }}"
-          if [[ "$REPO_NAME" == *".github.io" ]]; then
-            echo "path=" >> $GITHUB_OUTPUT
-          else
-            echo "path=/$REPO_NAME" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Build Next.js Static Export
-        env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.base-path.outputs.path }}
-          NEXT_PUBLIC_STATIC_MODE: 'true'
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: out
-          branch: gh-pages
+      # Add your deployment integration steps below if needed,
+      # e.g., deploy to Vercel, Netlify, Docker registry, or custom server.

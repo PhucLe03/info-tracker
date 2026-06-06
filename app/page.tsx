@@ -5,10 +5,7 @@ import { Search, GripVertical, Calendar as CalendarIcon } from 'lucide-react';
 import NewsCard, { NewsItem } from '@/components/NewsCard';
 import styles from './page.module.css';
 
-const isStaticMode = typeof window !== 'undefined' && (
-  window.location.hostname.endsWith('github.io') || 
-  process.env.NEXT_PUBLIC_STATIC_MODE === 'true'
-);
+// Next.js UI is now strictly database-reading, running dynamically.
 
 export default function Dashboard() {
   const [data, setData] = useState<{ date: string | null; news: Record<string, NewsItem[]> } | null>(null);
@@ -34,58 +31,28 @@ export default function Dashboard() {
       let currentSelectedDate: string | null = null;
       let newsData: Record<string, NewsItem[]> = {};
 
-      if (isStaticMode) {
-        try {
-          const summaryUrl = `${basePath}/data/news/summary.json`;
-          const summaryRes = await fetch(summaryUrl);
-          if (summaryRes.ok) {
-            const summary = await summaryRes.json();
-            dates = summary.availableDates || [];
-            setAvailableDates(dates);
-          }
-        } catch (err) {
-          console.warn('Could not load news summary:', err);
-        }
-
-        const dateToLoad = targetDate || dates[0];
-        if (dateToLoad) {
-          currentSelectedDate = dateToLoad;
-          setSelectedDate(dateToLoad);
-          
-          try {
-            const newsUrl = `${basePath}/data/news/${dateToLoad}.json`;
-            const newsRes = await fetch(newsUrl);
-            if (newsRes.ok) {
-              newsData = await newsRes.json();
-            }
-          } catch (err) {
-            console.warn(`Could not load news for date ${dateToLoad}:`, err);
+      try {
+        const url = targetDate 
+          ? `${basePath}/api/news?date=${targetDate}` 
+          : `${basePath}/api/news`;
+        const res = await fetch(url);
+        if (res.ok) {
+          const result = await res.json();
+          dates = result.availableDates || [];
+          currentSelectedDate = result.date;
+          newsData = result.news || {};
+          setAvailableDates(dates);
+          if (currentSelectedDate) {
+            setSelectedDate(currentSelectedDate);
           }
         }
-      } else {
-        try {
-          const url = targetDate 
-            ? `${basePath}/api/news?date=${targetDate}` 
-            : `${basePath}/api/news`;
-          const res = await fetch(url);
-          if (res.ok) {
-            const result = await res.json();
-            dates = result.availableDates || [];
-            currentSelectedDate = result.date;
-            newsData = result.news || {};
-            setAvailableDates(dates);
-            if (currentSelectedDate) {
-              setSelectedDate(currentSelectedDate);
-            }
-          }
-        } catch (err) {
-          console.error('Failed to load news from API:', err);
-        }
+      } catch (err) {
+        console.error('Failed to load news from API:', err);
       }
 
       setData({ date: currentSelectedDate, news: newsData });
 
-      // Load actual keyword order from public keywords.json, localStorage or API
+      // Load actual keyword order from localStorage or API
       let kwList: string[] = [];
       const localOrder = localStorage.getItem('localKeywordOrder');
       if (localOrder) {
@@ -97,25 +64,13 @@ export default function Dashboard() {
       }
 
       if (!kwList || kwList.length === 0) {
-        if (isStaticMode) {
-          try {
-            const keywordsUrl = `${basePath}/data/keywords.json`;
-            const kwRes = await fetch(keywordsUrl);
-            if (kwRes.ok) {
-              kwList = await kwRes.json();
-            }
-          } catch (err) {
-            console.warn('Could not load keywords:', err);
+        try {
+          const kwRes = await fetch(`${basePath}/api/keywords`);
+          if (kwRes.ok) {
+            kwList = await kwRes.json();
           }
-        } else {
-          try {
-            const kwRes = await fetch(`${basePath}/api/keywords`);
-            if (kwRes.ok) {
-              kwList = await kwRes.json();
-            }
-          } catch (err) {
-            console.warn('Could not load keywords from API:', err);
-          }
+        } catch (err) {
+          console.warn('Could not load keywords from API:', err);
         }
       }
 
@@ -244,25 +199,9 @@ export default function Dashboard() {
     setKeywordOrder(newOrder);
   };
 
-  const handleDragEnd = async () => {
+  const handleDragEnd = () => {
     setDraggedIndex(null);
-    if (isStaticMode) {
-      localStorage.setItem('localKeywordOrder', JSON.stringify(keywordOrder));
-      return;
-    }
-    try {
-      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      // Save the new keyword order to local keywords.json via PUT API
-      await fetch(`${basePath}/api/keywords`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ keywords: keywordOrder })
-      });
-    } catch (err) {
-      console.error('Failed to save keyword order:', err);
-    }
+    localStorage.setItem('localKeywordOrder', JSON.stringify(keywordOrder));
   };
 
   const handlePrevMonth = () => {

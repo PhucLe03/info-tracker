@@ -33,7 +33,6 @@ async function run() {
 
   const dataDir = path.join(process.cwd(), 'public', 'data');
   const keywordsFile = path.join(dataDir, 'keywords.json');
-  const newsDir = path.join(dataDir, 'news');
 
   let client = null;
   let db = null;
@@ -41,41 +40,35 @@ async function run() {
   if (process.env.MONGODB_URI) {
     try {
       console.log('Connecting to MongoDB...');
-      console.log('MONGODB_URI: ', process.env.MONGODB_URI);
       client = new MongoClient(process.env.MONGODB_URI);
       await client.connect();
       db = client.db('daily-intel');
       console.log('Successfully connected to MongoDB.');
     } catch (err) {
-      console.error('Failed to connect to MongoDB, falling back to local files:', err.message);
-      client = null;
-      db = null;
+      console.error('Failed to connect to MongoDB:', err.message);
+      process.exit(1);
     }
   } else {
-    console.log('MONGODB_URI not set. Running in completely local file-system mode.');
+    console.error('Error: MONGODB_URI is not set in environment or .env file.');
+    process.exit(1);
   }
 
-  // Get keywords list
+  // Load keywords list from local keywords.json (source of truth)
   let keywords = [];
-  if (db) {
+  if (fs.existsSync(keywordsFile)) {
     try {
-      const doc = await db.collection('keywords').findOne({ _id: 'list' });
-      if (doc && Array.isArray(doc.keywords)) {
-        keywords = doc.keywords;
-        console.log(`Fetched keywords from MongoDB: ${keywords.join(', ')}`);
-      }
-    } catch (err) {
-      console.error('Failed to fetch keywords from MongoDB:', err.message);
-    }
-  }
-
-  // Fallback to local keywords.json
-  if (keywords.length === 0) {
-    if (fs.existsSync(keywordsFile)) {
       const rawKeywords = fs.readFileSync(keywordsFile, 'utf-8');
       keywords = JSON.parse(rawKeywords);
-      console.log(`Fetched keywords from local file: ${keywords.join(', ')}`);
+      console.log(`Loaded keywords from local file: ${keywords.join(', ')}`);
+    } catch (err) {
+      console.error('Error reading local keywords.json file:', err.message);
+      if (client) await client.close();
+      process.exit(1);
     }
+  } else {
+    console.error(`Error: keywords.json file not found at ${keywordsFile}`);
+    if (client) await client.close();
+    process.exit(1);
   }
 
   if (!Array.isArray(keywords) || keywords.length === 0) {
@@ -84,7 +77,21 @@ async function run() {
     return;
   }
 
-  console.log(`Starting fetch for keywords: ${keywords.join(', ')}`);
+  // Sync keywords to MongoDB
+  try {
+    await db.collection('keywords').updateOne(
+      { _id: 'list' },
+      { $set: { keywords } },
+      { upsert: true }
+    );
+    console.log('Successfully synced keywords list to MongoDB.');
+  } catch (err) {
+    console.error('Failed to sync keywords list to MongoDB:', err.message);
+    if (client) await client.close();
+    process.exit(1);
+  }
+
+  console.log(`Starting news fetch for keywords: ${keywords.join(', ')}`);
   const newsResults = {};
   const parser = new Parser();
 
@@ -124,64 +131,26 @@ async function run() {
 
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
 
-  // Save to MongoDB
-  if (db) {
-    try {
-      await db.collection('news').updateOne(
-        { _id: today },
-        { $set: { news: newsResults, date: today, createdAt: new Date() } },
-        { upsert: true }
-      );
-      console.log(`Successfully saved news for ${today} to MongoDB.`);
-    } catch (err) {
-      console.error(`Failed to save news to MongoDB:`, err.message);
-    }
+  // Save news to MongoDB
+  try {
+    await db.collection('news').updateOne(
+      { _id: today },
+      { $set: { news: newsResults, date: today, createdAt: new Date() } },
+      { upsert: true }
+    );
+    console.log(`Successfully saved news for ${today} to MongoDB.`);
+  } catch (err) {
+    console.error(`Failed to save news to MongoDB:`, err.message);
+    if (client) await client.close();
+    process.exit(1);
   }
-
-  // Always write to local files so that the static export works correctly
-  if (!fs.existsSync(newsDir)) {
-    fs.mkdirSync(newsDir, { recursive: true });
-  }
-
-  const outputFile = path.join(newsDir, `${today}.json`);
-  fs.writeFileSync(outputFile, JSON.stringify(newsResults, null, 2));
-  console.log(`Successfully saved today's intel to: ${outputFile}`);
-
-  // Sync keywords list back to keywordsFile
-  if (keywords.length > 0) {
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-    fs.writeFileSync(keywordsFile, JSON.stringify(keywords, null, 2));
-    console.log(`Synced keywords list to local file: ${keywordsFile}`);
-  }
-
-  // Get available dates list
-  let availableDates = [];
-  if (db) {
-    try {
-      const docs = await db.collection('news').find({}, { projection: { _id: 1 } }).toArray();
-      availableDates = docs.map(doc => doc._id);
-    } catch (err) {
-      console.error('Failed to query dates from MongoDB:', err.message);
-    }
-  }
-
-  // Merge with local dates
-  const localFiles = fs.readdirSync(newsDir).filter(file => file.endsWith('.json') && file !== 'summary.json');
-  const localDates = localFiles.map(file => file.replace('.json', ''));
-
-  const combinedDates = Array.from(new Set([...availableDates, ...localDates]))
-    .sort((a, b) => b.localeCompare(a));
-
-  const summaryFile = path.join(newsDir, 'summary.json');
-  fs.writeFileSync(summaryFile, JSON.stringify({ availableDates: combinedDates }, null, 2));
-  console.log(`Successfully updated news summary at: ${summaryFile}`);
 
   if (client) {
     await client.close();
     console.log('Closed MongoDB connection.');
   }
+  
+  console.log('Fetch news operation completed successfully.');
 }
 
 run().catch(console.error);
