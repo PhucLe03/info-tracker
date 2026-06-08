@@ -9,7 +9,14 @@ export default function KeywordManager() {
   const fetchKeywords = async () => {
     try {
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const apiRes = await fetch(`${basePath}/api/keywords`);
+      const isStaticMode = typeof window !== 'undefined' && (
+        window.location.hostname.endsWith('github.io') || 
+        process.env.NEXT_PUBLIC_STATIC_MODE === 'true'
+      );
+      const url = isStaticMode 
+        ? `${basePath}/data/keywords.json` 
+        : `${basePath}/api/keywords`;
+      const apiRes = await fetch(url);
       if (apiRes.ok) {
         const data = await apiRes.json();
         setKeywords(data);

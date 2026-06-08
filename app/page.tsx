@@ -27,27 +27,58 @@ export default function Dashboard() {
       if (isInitial) setLoading(true);
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
+      // Detect static mode
+      const isStaticMode = typeof window !== 'undefined' && (
+        window.location.hostname.endsWith('github.io') || 
+        process.env.NEXT_PUBLIC_STATIC_MODE === 'true'
+      );
+
       let dates: string[] = [];
       let currentSelectedDate: string | null = null;
       let newsData: Record<string, NewsItem[]> = {};
 
-      try {
-        const url = targetDate 
-          ? `${basePath}/api/news?date=${targetDate}` 
-          : `${basePath}/api/news`;
-        const res = await fetch(url);
-        if (res.ok) {
-          const result = await res.json();
-          dates = result.availableDates || [];
-          currentSelectedDate = result.date;
-          newsData = result.news || {};
-          setAvailableDates(dates);
+      if (isStaticMode) {
+        try {
+          // Load summary.json to get available dates
+          const summaryRes = await fetch(`${basePath}/data/news/summary.json`);
+          if (summaryRes.ok) {
+            const summary = await summaryRes.json();
+            dates = summary.availableDates || [];
+            setAvailableDates(dates);
+          }
+          
+          // Determine the target date to fetch
+          currentSelectedDate = targetDate || dates[0] || null;
           if (currentSelectedDate) {
             setSelectedDate(currentSelectedDate);
+            // Fetch news for the selected date
+            const newsRes = await fetch(`${basePath}/data/news/${currentSelectedDate}.json`);
+            if (newsRes.ok) {
+              newsData = await newsRes.json();
+            }
           }
+        } catch (err) {
+          console.error('Failed to load static news files:', err);
         }
-      } catch (err) {
-        console.error('Failed to load news from API:', err);
+      } else {
+        try {
+          const url = targetDate 
+            ? `${basePath}/api/news?date=${targetDate}` 
+            : `${basePath}/api/news`;
+          const res = await fetch(url);
+          if (res.ok) {
+            const result = await res.json();
+            dates = result.availableDates || [];
+            currentSelectedDate = result.date;
+            newsData = result.news || {};
+            setAvailableDates(dates);
+            if (currentSelectedDate) {
+              setSelectedDate(currentSelectedDate);
+            }
+          }
+        } catch (err) {
+          console.error('Failed to load news from API:', err);
+        }
       }
 
       setData({ date: currentSelectedDate, news: newsData });
@@ -65,12 +96,15 @@ export default function Dashboard() {
 
       if (!kwList || kwList.length === 0) {
         try {
-          const kwRes = await fetch(`${basePath}/api/keywords`);
+          const url = isStaticMode 
+            ? `${basePath}/data/keywords.json` 
+            : `${basePath}/api/keywords`;
+          const kwRes = await fetch(url);
           if (kwRes.ok) {
             kwList = await kwRes.json();
           }
         } catch (err) {
-          console.warn('Could not load keywords from API:', err);
+          console.warn('Could not load keywords:', err);
         }
       }
 
