@@ -72,3 +72,61 @@
   padding: 0;
   font-size: inherit;
 }
+
+/* Special highlight for the latest (hot) news */
+.latestCard {
+  border: 1px solid rgba(245, 158, 11, 0.35); /* Subtle gold border */
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.6) 100%);
+  position: relative;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.05);
+}
+
+.latestCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #eab308); /* Gold/yellow top border accent line */
+  border-radius: 12px 12px 0 0;
+}
+
+.latestCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.hotBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 0.75rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}

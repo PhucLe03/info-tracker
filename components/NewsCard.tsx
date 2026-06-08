@@ -9,7 +9,7 @@ export interface NewsItem {
   source: string;
 }
 
-export default function NewsCard({ item }: { item: NewsItem }) {
+export default function NewsCard({ item, isLatest }: { item: NewsItem; isLatest?: boolean }) {
   const date = new Date(item.pubDate).toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -17,10 +17,20 @@ export default function NewsCard({ item }: { item: NewsItem }) {
   });
 
   return (
-    <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.card}>
+    <a 
+      href={item.link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className={`${styles.card} ${isLatest ? styles.latestCard : ''}`}
+    >
       <div className={styles.content}>
         <div className={styles.meta}>
           <span className={styles.source}>{item.source || 'News'}</span>
+          {isLatest && (
+            <span className={styles.hotBadge}>
+              <span className={styles.star}>★</span> New
+            </span>
+          )}
           <span className={styles.date}>{date}</span>
         </div>
         <h3 className={styles.title}>{item.title}</h3>

@@ -35,7 +35,7 @@ function normalizeUrl(urlStr) {
     url.search = '';
     url.hash = '';
     return url.toString().trim();
-  } catch (err) {
+  } catch {
     return urlStr.trim();
   }
 }
@@ -128,6 +128,8 @@ async function run() {
     }
   }
 
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
+
   console.log(`Starting news fetch for keywords: ${keywords.join(', ')}`);
   const newsResults = {};
   const parser = new Parser();
@@ -146,6 +148,25 @@ async function run() {
       const results = [];
       const items = feed.items || [];
       for (const item of items) {
+        // Only keep news published on the selected date (today)
+        if (!item.pubDate) continue;
+        let isToday = false;
+        try {
+          const pubDateObj = new Date(item.pubDate);
+          if (!isNaN(pubDateObj.getTime())) {
+            const articleDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(pubDateObj);
+            if (articleDate === today) {
+              isToday = true;
+            }
+          }
+        } catch {
+          // Ignore date parse errors
+        }
+
+        if (!isToday) {
+          continue;
+        }
+
         const link = (item.link || '').trim();
         if (!link) continue;
 
@@ -175,14 +196,12 @@ async function run() {
       }
 
       newsResults[keyword] = results;
-      console.log(`- Success: found ${results.length} articles for "${keyword}" (skipped duplicates)`);
+      console.log(`- Success: found ${results.length} articles for "${keyword}" (skipped duplicates & older dates)`);
     } catch (err) {
       console.error(`- Error fetching news for "${keyword}":`, err.message);
       newsResults[keyword] = [];
     }
   }
-
-  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
 
   // Save news to MongoDB
   if (db) {

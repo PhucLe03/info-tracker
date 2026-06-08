@@ -81,8 +81,6 @@ export default function Dashboard() {
         }
       }
 
-      setData({ date: currentSelectedDate, news: newsData });
-
       // Load actual keyword order from localStorage or API
       let kwList: string[] = [];
       const localOrder = localStorage.getItem('localKeywordOrder');
@@ -108,19 +106,81 @@ export default function Dashboard() {
         }
       }
 
+      // Prepare mergedNews to hold the backfilled news (max 10 articles per keyword)
+      const mergedNews: Record<string, NewsItem[]> = {};
+      const renderedLinks = new Set<string>();
+
+      const keywordsToProcess = (kwList && Array.isArray(kwList) && kwList.length > 0)
+        ? kwList
+        : Object.keys(newsData);
+
+      for (const kw of keywordsToProcess) {
+        mergedNews[kw] = [];
+        const currentNews = newsData[kw] || [];
+        for (const item of currentNews) {
+          const link = item.link || '';
+          if (link) {
+            if (renderedLinks.has(link)) continue;
+            renderedLinks.add(link);
+          }
+          mergedNews[kw].push(item);
+        }
+      }
+
+      // Backfill with news from previous dates if there's still more space (less than 10 articles)
+      const targetDateIndex = dates.indexOf(currentSelectedDate || '');
+      if (targetDateIndex !== -1) {
+        let prevDateOffset = 1;
+        while (
+          prevDateOffset + targetDateIndex < dates.length &&
+          keywordsToProcess.some(kw => mergedNews[kw].length < 10)
+        ) {
+          const prevDate = dates[targetDateIndex + prevDateOffset];
+          try {
+            const url = isStaticMode
+              ? `${basePath}/data/news/${prevDate}.json`
+              : `${basePath}/api/news?date=${prevDate}`;
+            const res = await fetch(url);
+            if (res.ok) {
+              const prevResult = await res.json();
+              const prevNews = isStaticMode ? prevResult : (prevResult.news || {});
+              for (const kw of keywordsToProcess) {
+                if (mergedNews[kw].length < 10 && prevNews[kw]) {
+                  for (const item of prevNews[kw]) {
+                    const link = item.link || '';
+                    if (link) {
+                      if (renderedLinks.has(link)) continue;
+                      renderedLinks.add(link);
+                    }
+                    mergedNews[kw].push(item);
+                    if (mergedNews[kw].length >= 10) {
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+          } catch (err) {
+            console.error(`Failed to load historical news for backfilling space (${prevDate}):`, err);
+          }
+          prevDateOffset++;
+        }
+      }
+
+      setData({ date: currentSelectedDate, news: mergedNews });
+
+      const fetchedKeys = Object.keys(mergedNews);
       if (kwList && Array.isArray(kwList)) {
-        const fetchedKeys = Object.keys(newsData);
         // Keep keywords from the saved order if they exist in the fetched news
         const orderedKeys = kwList.filter(k => fetchedKeys.includes(k));
         // Append any extra keys that might not be in the saved order yet
         const extraKeys = fetchedKeys.filter(k => !kwList.includes(k));
         setKeywordOrder([...orderedKeys, ...extraKeys]);
       } else {
-        setKeywordOrder(Object.keys(newsData));
+        setKeywordOrder(fetchedKeys);
       }
 
       if (isInitial) {
-        const fetchedKeys = Object.keys(newsData);
         // Load selected keywords from localStorage if exists
         const saved = localStorage.getItem('selectedKeywords');
         if (saved) {
@@ -414,9 +474,12 @@ export default function Dashboard() {
                           <p className={styles.noItems}>No recent news for this keyword.</p>
                         ) : (
                           <div className={styles.grid}>
-                            {items.map((item, idx) => (
-                              <NewsCard key={idx} item={item} />
-                            ))}
+                            {items.map((item, idx) => {
+                              const itemDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date(item.pubDate));
+                              const isLatest = itemDate === selectedDate;
+                              console.log(`[NewsCard Render] title="${item.title}" itemDate="${itemDate}" selectedDate="${selectedDate}" isLatest=${isLatest}`);
+                              return <NewsCard key={item.link || idx} item={item} isLatest={isLatest} />;
+                            })}
                           </div>
                         )}
                       </section>
