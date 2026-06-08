@@ -1,248 +1,63 @@
 {
-  "Tính toán lượng tử": [
-    {
-      "title": "Công nghệ lượng tử: Chuẩn bị từ hôm nay cho năng lực tự chủ của ngày mai",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMW5SMFNGVWVOc1ExS01ZcjAxeUE3ZE5tSFR1OXpEU2tEMVVMMmxqOUNESlMzMFNFTDhMMi05Y0I5dWhpd0FyOG1mNWNVVEIyblBMS1JGTGF6UGE1V2IwTmlEU2NZYUczSGlBTVkteVM3N1ZydFBqUkhiWUlsSFMwQWNnTjF6Mks0OWxzZmNydF9tQi13QW1fampFa1k1RXk4TTB0ZzdwcVFpQ2tvcVY2WkI2aThnazZxTzZhZlBNQXVHTW9vRlBxX3BlNVVKaHBF?oc=5",
-      "pubDate": "2026-06-07T03:33:24.000Z",
-      "snippet": "Công nghệ lượng tử: Chuẩn bị từ hôm nay cho năng lực tự chủ của ngày mai  Báo Tuyên Quang",
-      "thumbnail": null,
-      "source": "Báo Tuyên Quang"
-    },
-    {
-      "title": "Công nghệ lượng tử: Cuộc đua công nghệ cao mới và làn sóng đón nhân tài về nước",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTjM5ZXk0RENMR2tTM1VNemNkUERqTmdWNXJYNmUxeDJKV0hSS3MzZ0ZHWXBSbmI5eHlxUWh6cXpVSW9KMDJETk44MHlteElBOElLUlNmcGJGYzBFUmpnSzhlaFU4SnpGWWNFaEllcWY1MjBPa0hSSjJKU00xY2ZQR1llTTJDdFNyNmVpNU9QdFVOZWhidm55T1pNTVZXbUZiSlJfLUFmcFJZdFhyLW1sbmg4MA?oc=5",
-      "pubDate": "2026-05-21T07:00:00.000Z",
-      "snippet": "Công nghệ lượng tử: Cuộc đua công nghệ cao mới và làn sóng đón nhân tài về nước  Báo Nhân Dân điện tử",
-      "thumbnail": null,
-      "source": "Báo Nhân Dân điện tử"
-    },
-    {
-      "title": "Trung Quốc xây dựng máy tính lượng tử nhanh nhất thế giới",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTWRfNnpLWDdSODZ4NFN4MDFNOHVCN3VJNDZBSmFFbWc4N1RXV1BXanZJekx4MHRPd0psZkxyc0laLWtacEpQTy0tT1NPS3VWQTNwb29XZnE0YnNhSUJkZ3VzV2ZYbldwRnVoYkYzNmVQWnYyV0lyakViS2ZHQTh5UWJJM0ZpS1Z3SEE?oc=5",
-      "pubDate": "2026-05-16T07:00:00.000Z",
-      "snippet": "Trung Quốc xây dựng máy tính lượng tử nhanh nhất thế giới  VnEconomy",
-      "thumbnail": null,
-      "source": "VnEconomy"
-    },
-    {
-      "title": "Khởi Động Cuộc Thi Hackathon Quốc Tế Về Tính Toán Lượng Tử 2026",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNM2pOdG1EYV9ERFlueXNibkdsVHVycjFRUFJuNzhDT0F6V1BqS295OUZsS0Z6TTByczd0MGRHMG4zZ29WSnhzaUhQWmZzTy1JUHRjclFaNHpfaWZwLUxHWGtleEdCM2VUdTNwOTd3QUgzd1c5RjU4WlNNdGp2NlRhcW5neThieTZ5UjBZ?oc=5",
-      "pubDate": "2026-02-11T08:00:00.000Z",
-      "snippet": "Khởi Động Cuộc Thi Hackathon Quốc Tế Về Tính Toán Lượng Tử 2026  VnEconomy",
-      "thumbnail": null,
-      "source": "VnEconomy"
-    },
-    {
-      "title": "Trung Quốc ra mắt đột phá máy tính lượng tử: Xử lý phép tính chỉ trong 25 micro giây, vượt xa siêu máy tính mạnh nhất nước Mỹ",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZ20zSGN1NmRxY3A2UHI0aHU4V2JvVDBGTk5XdFZhaG5LRDdLTWVBUFJqZ2RoRjQtNXM2akozbXQ1SVlGRkl0d2xsbzlZZVZ6WGtYMzh6eVhXSWtoaVdJVGJsdUQ1R3RqSjQ4V3U4bTBhQmhNWWtZMlhVeTJJLUhPZjVnS3g5MmMzWUxIcXFaalVHbmVnQWl6ZkhDQkViZjROR1UyeWlzM2pOd0ZZNElHOVZFdUlWM2pnTlpPOXR2V3JULWdyRnFtNV9jX0VEREs5NnRJdTlGQzdyR3V4djFGWWRHelAwM3oxd3RhN0pWOW8?oc=5",
-      "pubDate": "2026-05-15T07:00:00.000Z",
-      "snippet": "Trung Quốc ra mắt đột phá máy tính lượng tử: Xử lý phép tính chỉ trong 25 micro giây, vượt xa siêu máy tính mạnh nhất nước Mỹ  nguoiquansat.vn",
-      "thumbnail": null,
-      "source": "nguoiquansat.vn"
-    },
-    {
-      "title": "Nga ra mắt máy tính lượng tử mới, phá vỡ rào cản công nghệ toàn cầu",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdmU3WkF5Q3JGNEluZmJwM1RQTW1WMEV0WUk5UzN1MVlhRF8yb1E4MFcyZldwVWxjZEpxN3pUbGtEOVZDeGVYcE1PbkZOZldSdTVSNXFqbzYxZGtrejdpdk96RXhpZXhnVjQwdFVGNGR6MGdKcGhESFpYQUJ6TWliZVFfNHJnb3VvV0VfT2dnVEZHbDFDcVp0SjFJMHIyUWs4N2tTeGZNMUJKa00?oc=5",
-      "pubDate": "2026-02-11T08:00:00.000Z",
-      "snippet": "Nga ra mắt máy tính lượng tử mới, phá vỡ rào cản công nghệ toàn cầu  Laodong.vn",
-      "thumbnail": null,
-      "source": "Laodong.vn"
-    },
-    {
-      "title": "Cổ phiếu lượng tử bùng nổ nhờ “cú hích” AI từ Nvidia",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYUp6Wkk5YW9wemVxa01nUFQ4QnI1WTdIT0hHTk9MMU96OXlrN041TndZMl84VDhDQlE3Vk95OGJjSjRmYjliVTRvdnlkeklBQmpldnRjQ3RfeU9QWnRiRFdLM0NDZnRWYzJVY0RjZmpyc0JycVl3RlYwMm50a2ZfU2VoWmYzN1Fndm5jUW5jRTM?oc=5",
-      "pubDate": "2026-04-17T07:00:00.000Z",
-      "snippet": "Cổ phiếu lượng tử bùng nổ nhờ “cú hích” AI từ Nvidia  VnEconomy",
-      "thumbnail": null,
-      "source": "VnEconomy"
-    },
-    {
-      "title": "Mỹ - Trung Quốc tăng tốc cuộc đua công nghệ lượng tử",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYm5VcmtEVWp1bHU4Mjl0ZHdJcldFb1A5dlEyYU5uZHFWXzVnV2RZX2NJV0FoZ1p4c3JhSTVKX0I3ZWx0eUxJekQyZmtsdXJzRURnOVlrUjd1VmxXQlZxczB0MUFvblNqSXRjX2tMeExEb1p2VnNtVzZNQTlqSXpxVE93RUk5bkwwWjY5aFM4b3gxSXM?oc=5",
-      "pubDate": "2026-05-29T07:00:00.000Z",
-      "snippet": "Mỹ - Trung Quốc tăng tốc cuộc đua công nghệ lượng tử  vov.gov.vn",
-      "thumbnail": null,
-      "source": "vov.gov.vn"
-    },
-    {
-      "title": "Trung Quốc chính thức vượt Mỹ trong một lĩnh vực quan trọng",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOOS1ERkJNaExoaGFQSnZPeUVXV3Rxa3FESE5FSjdSV3FZT05yRXdrQk9RNUxjREdCTk43dWN2YlZvQWdlb3BZOU5Mdnp0QlRMZHdaM3lPZFNiQU9FY2stZ3BBRURzOURka0dHYnJuX1NvZGlwTHhKNkVnMUxTaU0tRXF2ZTRDUWRYd082c2ZhQ0tTR3BtYjB6TV9XeUtNSDR6?oc=5",
-      "pubDate": "2026-05-18T07:00:00.000Z",
-      "snippet": "Trung Quốc chính thức vượt Mỹ trong một lĩnh vực quan trọng  CafeF",
-      "thumbnail": null,
-      "source": "CafeF"
-    },
-    {
-      "title": "Nhật Bản tăng tốc “đánh cược” vào điện toán lượng tử: Nhắm thẳng thị trường 1,4 tỷ dân và cuộc chơi công nghệ nghìn tỷ USD",
-      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOUXQ2dW9TNzh0NEpHZ2k0TkFRSE9zNmVpRElMT3ZBM0pGTHpPT19mbWZzempscEluZWVXTmlsZ2hSb1gtRDh1LTB4NzkyYjBlZVJfUTMxOVRodXRDSjhvOXdXVVZWNVVWbjEzWlkxa1V1TlRwVmR1NnRoM1RGZHV4UUFZcl9jV000Z1dSdTYwV2Z3NUJiQ3R2QmYyaEVlMkxjaF9FRkc0WGxBUE9nWG83RTc4SGNYOGJ5VVEzbUplSjI3NXVwQVRQTVJ0dVVjSEk3WUxWb1h6SmNreVRGYkZWSjFZY2JOcUc2d0pqZ0JhMA?oc=5",
-      "pubDate": "2026-05-07T07:00:00.000Z",
-      "snippet": "Nhật Bản tăng tốc “đánh cược” vào điện toán lượng tử: Nhắm thẳng thị trường 1,4 tỷ dân và cuộc chơi công nghệ nghìn tỷ USD  CafeF",
-      "thumbnail": null,
-      "source": "CafeF"
-    }
-  ],
+  "Tính toán lượng tử": [],
   "Hội thảo khoa học": [
     {
-      "title": "Hội thảo khoa học tôn vinh cuộc đời và đạo nghiệp Đại lão Hòa thượng Thích Huệ Thành",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS284cUp4aWM3cUxVMkZ4MUl6V2hyV19ERGF3V0ZDeFZxY2U4ZkhrR282NjhXZE81dE41cEJtR282RU1PcHYyR1QtRVJmQWdIMlowT3JNZXVTMVNBMlhkTXIyQXY1WEFUNnZsMDUzSnlxdXRpVU82OUF5a3Z1anFYdk44blVRTW9CT1JnS0dMRW96MHJjd3lpTng2bnRlV2VKbzZCQzUxSm8zbHk1dnlmTA?oc=5",
-      "pubDate": "2026-06-08T07:34:00.000Z",
-      "snippet": "Hội thảo khoa học tôn vinh cuộc đời và đạo nghiệp Đại lão Hòa thượng Thích Huệ Thành  Phat Su Online",
+      "title": "Phó Thủ tướng Phạm Thị Thanh Trà chủ trì Hội thảo xác minh kết luận thông tin về liệt sĩ, mộ liệt sĩ tại khu vực nghĩa trang Đô Thành",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOOWdsRXhfYnVPaGhHRnBiOEFwd0NWMFl3ZkZmZWNCbXVxSkk3UldEWWVjN294NmhlVWZwU0did3RqSENsdnZjN3pJWDVPS1ZEbXRfNmkyZGlPN0xlaE5rVkZRT3JiUjFiV0tjZDh1alNEMlFiejJWWHBrMEVJdWdqaWN2bGg2V1VJMWdEVzFLU0FGZjFzWGFKbDhMZVVDcmctWHQxekhTZVo1cTY3SUNDUFB2SlhrbDJMZ1djNnRYcGh2UC1OLVhoaEZFYnc3SWpYY1ZDQ2J1SlA0UWF0THluNjNhNTNxTy1aTExCSXJSS2d2Z2lQelJOek02c2pMa3RxZUE?oc=5",
+      "pubDate": "2026-06-08T04:05:01.000Z",
+      "snippet": "Phó Thủ tướng Phạm Thị Thanh Trà chủ trì Hội thảo xác minh kết luận thông tin về liệt sĩ, mộ liệt sĩ tại khu vực nghĩa trang Đô Thành  Báo Đại biểu Nhân dân",
       "thumbnail": null,
-      "source": "Phat Su Online"
+      "source": "Báo Đại biểu Nhân dân"
     },
     {
-      "title": "Hội thảo khoa học quốc gia về chuyển đổi kép trong phát triển kinh tế bền vững",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZXRKWUg0WllxcElMVEtIa3pqbFcyOGROZnNtY1BpWVcwWmNqQ3BIcjdFTm91UHdyajJLRl9PX1hzRl9vamVwTWV3dms4dUVBd0RYeUFfT0RfWVlIZ05XZzNyc01FRlFwdjZFeHJISUYxbTk5OHJUZEtiV0dUNjdKM0lISUZiZHJOeGQ1d0lVNWZBX21qSlc5UExmR0JNSGRhWUg0WnZ6ZF9XbmxxV3JHemZn?oc=5",
-      "pubDate": "2026-06-06T03:34:00.000Z",
-      "snippet": "Hội thảo khoa học quốc gia về chuyển đổi kép trong phát triển kinh tế bền vững  Báo Thanh Hóa",
+      "title": "Văn hóa biển - Kết nối qua các trưng bày bảo tàng",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQS1dsOXB4WjFmY1N5TkRDTm9UT3djdzlJS085MHBGNW5RR1E2a2I2ZklXcWIweWJ3Szk2em90ZFozVUw3dVFOREYzUENSNktJbTNtRHBrS0VBZDQ3LWY2bUt1TnktckR5eHRORTBVRnJuSDBvUDdPeEl4Wm5BT2RsdXBSMnJBVzVkcW5Z?oc=5",
+      "pubDate": "2026-06-08T04:08:49.000Z",
+      "snippet": "Văn hóa biển - Kết nối qua các trưng bày bảo tàng  nguonluc.com.vn",
       "thumbnail": null,
-      "source": "Báo Thanh Hóa"
+      "source": "nguonluc.com.vn"
     },
     {
-      "title": "Hội thảo xác minh, kết luận thông tin về mộ tập thể liệt sĩ tại khu vực Công viên Lê Thị Riêng",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPLUlVQVpYS01YVnhwYldVTlhJUjc0YXVYSEVWSWFtWkRVWlJTRHN2YkJpcGZId0d2OHJLcmlWbWRTNWZKUkNmMTJ3Ykg4Sjd4SHNmSEdtREx2d1dGOVhYei1NRDFtU1M3b1MzdF9YMzVXVS01S3FlWnUwVG5DN1hjQWE0SjdyYnJOQXJpU0RwWjBFS1VYNTd6M25XWEhhdWZEUUpPbzZlRzZCWkJkdVhJYTZhTEl1WlJvT2pGNHYxMVZnNTM0NlUxcGdhdS1sdzVyTGZr?oc=5",
-      "pubDate": "2026-06-08T06:53:00.000Z",
-      "snippet": "Hội thảo xác minh, kết luận thông tin về mộ tập thể liệt sĩ tại khu vực Công viên Lê Thị Riêng  Báo Công an Thành Phố Hồ Chí Minh",
+      "title": "Phó Thủ tướng mong đón các liệt sĩ ở công viên Lê Thị Riêng về Đất Mẹ",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNHRzMTNhUTdZRHlOR3FqYXF3bkh3YmxlaG1ySFZrdjdkcmx4YTdKXzdNc1dMVjFNa1JnOFdLeWRGZkpQMWxBVEFlNDZtSFBXdWpEMEg5dDJIbGdpcktrVjJlSDVIMWNnX2RaYUIyMnV1dE1DaEVub3FPeFBYNHJrYno1NHp4VjVKMGZ2TWE3azFKZWJIZ1lscEpXLUhEY09oSlV6Y3hsNWpJYjd5dDUzTGNDQ2JldGxTYWFWeC1B?oc=5",
+      "pubDate": "2026-06-08T03:31:00.000Z",
+      "snippet": "Phó Thủ tướng mong đón các liệt sĩ ở công viên Lê Thị Riêng về Đất Mẹ  Báo Dân trí",
       "thumbnail": null,
-      "source": "Báo Công an Thành Phố Hồ Chí Minh"
+      "source": "Báo Dân trí"
     },
     {
-      "title": "Hội thảo cấp Quốc gia về xác minh kết luận thông tin liệt sĩ, mộ liệt sĩ tại Nghĩa trang Đô Thành",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPZVBUMUhJbHhOeDV5RlBERDB1dkdSOWtkZ1ZlNjdxT19pWlBEQkgwSjZEWVNSMkJ4MnA1UW0tb3RmTTFnRjRvUW5hM3lFVkZEQlBzZnJ2Y0p3ejlza1lfcnpqZnB2T0ItdGI0WS10ZVZ0NW14S2ZYelZKaTBfLURLSU40d2dpX2o4YjA3OXF2Z3RXYWl4TFBFVFdVd0FmWVNlQW9rdWptY3Z4YjZjY1IzSW9sTmNUT0tJREgtZ0N0NTREN2hQRzFpSUhBaUlPMmUyUGlQdmpXQTV0Z3AzdGc?oc=5",
-      "pubDate": "2026-06-08T03:58:00.000Z",
-      "snippet": "Hội thảo cấp Quốc gia về xác minh kết luận thông tin liệt sĩ, mộ liệt sĩ tại Nghĩa trang Đô Thành  Quân Khu 7 Online",
+      "title": "Pharmacity tham dự Hội nghị Khoa học tâm thần toàn quốc lần thứ V",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcXJ0ckdVYkxsQnIxNlg1TGFNZE9XdHJzbklWT2pfZDZ5aGxzUE5heXlPTmhfME0xdFF0VnBfcE5meWtqWFhZQWxMVzlIbUExdGVQbm9yV1FURnJjeFNuTU1DRzBfMGhkYUdjeDVPLVExdWlDZHRwTExlY0M0b3pob1NNVlJiT0J2LWVwTjZBM1hjUQ?oc=5",
+      "pubDate": "2026-06-08T04:05:53.000Z",
+      "snippet": "Pharmacity tham dự Hội nghị Khoa học tâm thần toàn quốc lần thứ V  Vietnam.vn",
       "thumbnail": null,
-      "source": "Quân Khu 7 Online"
+      "source": "Vietnam.vn"
     },
     {
-      "title": "Trường Đại học Ngoại ngữ làm việc với CLEF và VAJA về công tác tổ chức Hội thảo quốc tế",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOb0ZSOXJDNk9ROTV0ZzJyVFAtYi1NeW92eENmMTVSSlhneFlfVHhQcGFqM1h3bU5YcmVKcmwzakJhSFoxclpaM0dnY2VuQXR0ci10dEhqdDM5cFNNWEVlMmFNR1JmWjVFWkY4OF9CSzlXT2ljZ1RwN2l4Qy1oN1BENjVmY0F2Q1hNemMyV1AtU1ZRQWhrODJkRHQwUy1KOVNVRm1LS3hLYTRZdkZCMC1rYllR?oc=5",
-      "pubDate": "2026-06-08T08:47:21.000Z",
-      "snippet": "Trường Đại học Ngoại ngữ làm việc với CLEF và VAJA về công tác tổ chức Hội thảo quốc tế  vnu.edu.vn",
+      "title": "Hành động quyết liệt để hoàn thành nhiệm vụ đặc biệt thiêng liêng",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVVpLVW1ESk9ueUpLT2puaU1xdW1zbVY0TlU0U2lQYVFYakszSGhsQkZ4RVhCbjlkOWdPQS1ybnpsY1Y2TFRHSUktcmdreHljZTZoU2o1UzM5a0VWLV9qTThVV29pRGVBZmgzM0dZeFZUMHNSdVhfYWcyckFqVjhoT2Z1eUt0dFB3TU9fa1ZtdUpEdw?oc=5",
+      "pubDate": "2026-06-08T08:28:52.000Z",
+      "snippet": "Hành động quyết liệt để hoàn thành nhiệm vụ đặc biệt thiêng liêng  Vietnam.vn",
       "thumbnail": null,
-      "source": "vnu.edu.vn"
+      "source": "Vietnam.vn"
     },
     {
-      "title": "Hội thảo khoa học về hai lời kêu gọi thiêng liêng của Chủ tịch Hồ Chí Minh",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVnd0SXBFY2QwQ3ZRU0xjQTAtd3FnUTdtU3NyWHJ2VmZscWRJLXFDS1NHdnh5OXdGSTJfMWdMbDFiX09mSFNpU2Z4YXRWNWtOalBVZUlwWlhJeFpONUJEUTRQb0xHSG8tcHNMQUlzVGtaUzFFa1VmenRjQ2JLclIwYy16MVd6Ulo0djlITXhkTm1vRXVYeGJrcDA4WGw1bnNzN0h3bFlkcG5sNHAxVnpxdjAyNElXbzRyLXQw?oc=5",
-      "pubDate": "2026-06-04T21:09:41.000Z",
-      "snippet": "Hội thảo khoa học về hai lời kêu gọi thiêng liêng của Chủ tịch Hồ Chí Minh  Báo Biên phòng",
+      "title": "Ứng dụng y học tái tạo vào chữa bệnh xương khớp, chăm sóc vết thương",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeUxaYWEyaXp5TWlNNExHb0JPQlpydUJjRldwYmlQRHFDTG1yOVJzSUpfcUtjb21JZUdlQ2ZnS1NiREtaZExkNWJ3eUtfLW45eXJJUlVINFhJVGdVQUxUUHJnR0EwdnlGSjFyRTVrUExfMEhKa3dDcE1RbHB5cXdoRTBHcFlVVWFFMGk4T0pncFowTWR1?oc=5",
+      "pubDate": "2026-06-08T10:02:33.000Z",
+      "snippet": "Ứng dụng y học tái tạo vào chữa bệnh xương khớp, chăm sóc vết thương  Vietnam.vn",
       "thumbnail": null,
-      "source": "Báo Biên phòng"
-    },
-    {
-      "title": "Bệnh viện Đa khoa Tâm Anh ghi dấu ấn tại Hội nghị Khoa học toàn quốc thường niên lần thứ V - Hội Bệnh mạch máu Việt Nam",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM1NOQjViSm9TRlhaeXJleUlReUJTRW1UVkdLdTlSSWpCSjcwWnhxdWxpelV6el9KaGdKQVA5ZUd4alZBODcya0w1WTd6cFVQSzk1MUx6MGN3NFU5V3F4VmhTMWRCaHlHUGlpX2thWUo2UFFaeEdXXzUzaHB6T3RCWHBsVUlnYnNHY2tZSzhhcWgxNTY1T1gxOEhUeDh4Nmp0VFZ0OUFqdWVSbmNT?oc=5",
-      "pubDate": "2026-06-08T10:14:48.000Z",
-      "snippet": "Bệnh viện Đa khoa Tâm Anh ghi dấu ấn tại Hội nghị Khoa học toàn quốc thường niên lần thứ V - Hội Bệnh mạch máu Việt Nam  Bệnh viện Đa khoa Tâm Anh",
-      "thumbnail": null,
-      "source": "Bệnh viện Đa khoa Tâm Anh"
-    },
-    {
-      "title": "Kiện toàn Ban Chỉ đạo của Quốc hội về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOLWZaUXIxbGFqZUpSMVo4aC1ZYVdFaXFnZ2FrRjE2UjBESE0tTm5oVVpNSzgxLWlXRHI2aXYwMUQzaDVPbi1jcm5fdGhZemhsRHUyb2xfcFMxTzZPRGtNbHhjZkNDVUpuTXRRYk9FdzNhT3hyS0VVU1FxWXJrU0phV0tkck5pTk4tczJQLTY0NGkyaWZ3UVVxZnVwbHA4WWFGOWtOUHRRLUpTam1EUm1DOURCQUcwaGRObUZpUFhWbU54aWRwcVE?oc=5",
-      "pubDate": "2026-06-08T04:12:00.000Z",
-      "snippet": "Kiện toàn Ban Chỉ đạo của Quốc hội về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số  Cổng thông tin điện tử tỉnh An Giang",
-      "thumbnail": null,
-      "source": "Cổng thông tin điện tử tỉnh An Giang"
-    },
-    {
-      "title": "Hội thảo khoa học cấp bộ về nâng cao năng lực lãnh đạo của bí thư đảng ủy cấp xã ở Tây Nguyên",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYU1GeUhJOEh6b3A5bEhFTHdJdTRxMnQyNEpmbVBfTm9GcDFkbFR2QVJjUnZ0MVNjcVFYVHllZ2g4NzhXUHFYZk1VOFBhOEJCZkVxNVJhSXNFZG9wM09XNlNkcmNSM215QXAtcjlnNV8yNER1MTZCcGtxaTJEU0s3dDMyLVJDQXllMjhYRjZjR3ktOWJpc2Zpdnh4RkFjZ2s3VV9QUFJZdU9LOUpEa3hFSHY3WU5hR0Qya1RLbA?oc=5",
-      "pubDate": "2026-06-03T07:51:00.000Z",
-      "snippet": "Hội thảo khoa học cấp bộ về nâng cao năng lực lãnh đạo của bí thư đảng ủy cấp xã ở Tây Nguyên  Học viện Chính trị Quốc gia",
-      "thumbnail": null,
-      "source": "Học viện Chính trị Quốc gia"
-    },
-    {
-      "title": "Hội nghị khoa học bàn giải pháp thúc đẩy tăng trưởng kinh tế hai con số tỉnh Phú Thọ giai đoạn 2026-2030",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWE1MMFVNR3RmbDl3YjR2N0IyV2RDLXNNNkc5Z053RUZUQlJfVXNyMW04a0hoTXNsVVdmOHdMcDNLU2hjUTAyZndkYzZvdjlVNWZjVEd5STBWOXNNMWRIdDhKNjhvYVhDVm9HcVdRNFFOQlcwSnlSVWM3NFRtdXZYOFhxN1FzT2U4UG5YUlpxVTFVSDZaRFBzVzl2ZHZpdTBVaGpORUdnbEE3YmllSkJrSlJSNEZCUnhxbHFPb012WDVaT0FNWng0Qw?oc=5",
-      "pubDate": "2026-06-06T09:23:00.000Z",
-      "snippet": "Hội nghị khoa học bàn giải pháp thúc đẩy tăng trưởng kinh tế hai con số tỉnh Phú Thọ giai đoạn 2026-2030  Học viện Chính trị Quốc gia",
-      "thumbnail": null,
-      "source": "Học viện Chính trị Quốc gia"
+      "source": "Vietnam.vn"
     }
   ],
   "Hội thảo lượng tử": [
     {
-      "title": "Swinburne Vietnam thúc đẩy AI lượng tử, bán dẫn tiên tiến và an ninh mạng",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXd0dkhUYm4wOEdQeXpMdkZxaFNBRVl3MnlIcjBDU2tZRnQ3eTZCZENvY2JjcDE3WW05c1NwdVJLeXA1WjlFSEpCbnRpSmpmeEFROGItQVBITXpZT2xlRTdnb1pxSHNtN1AyYURCcm1Ndi1JaTNNTGtENjJ0LW85ejh0RjQzME41aEJSbnFHanRsS3o3R0VnUC1hUWVKcUxoLUVPaDdZbTZFbDQ?oc=5",
-      "pubDate": "2026-04-15T07:00:00.000Z",
-      "snippet": "Swinburne Vietnam thúc đẩy AI lượng tử, bán dẫn tiên tiến và an ninh mạng  VnExpress",
+      "title": "Dàn diễn giả quy tụ tại Hội thảo chuyển dịch năng lượng do Báo Lao Động tổ chức",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNOFdEUDRvY1Uydm1HSV8yT1gteWxWYjE1WDF1dUhNa2NwTXJPRFl1dnNJampwU3VwSDNIb0tMcnFDSmREdGJsUFBYeG9fWDJIM3htT0NSWi10LXAxRWM2dVJ5RkpmT0hoMjZDRG5mZm5ieU9CeGhYYmV2cElhNi1OQlFuZ0pPTjNQeHd1WnVJaVRvWF8wSUliWENQQnVjVDNDRjZFUGExcHV5X1R2eF9BRVNlc1Myelg3LW51TDBR?oc=5",
+      "pubDate": "2026-06-08T14:04:04.000Z",
+      "snippet": "Dàn diễn giả quy tụ tại Hội thảo chuyển dịch năng lượng do Báo Lao Động tổ chức  Laodong.vn",
       "thumbnail": null,
-      "source": "VnExpress"
-    },
-    {
-      "title": "Công nghệ cắt lớp vi tính lượng tử: Mở ra cơ hội phát hiện bệnh sớm",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdUF6S1NScTRFUjVoa1hzS2ZsN2lhbDVOSlZYQU5GYTBGY0ZIVmoxNUZQak9paUVXbWJQampabkU0ZnYxQXF6eXA5QlJOWHJkMVdzU3RjdXNXNG1uSnVZZTMxYVdxZHV2U3hLYXlHMy1vbGRoTGxmaDlRTVZJVnNud2lFTmk4YVhwOEpRYzZQblE1ZmZwQi1RXzdIb19fZEV0VmxxN0ZGYWZCTHM?oc=5",
-      "pubDate": "2026-04-17T07:00:00.000Z",
-      "snippet": "Công nghệ cắt lớp vi tính lượng tử: Mở ra cơ hội phát hiện bệnh sớm  Tuổi Trẻ",
-      "thumbnail": null,
-      "source": "Tuổi Trẻ"
-    },
-    {
-      "title": "Điện hạt nhân quy mô nhỏ: Giải pháp “nguồn nền” cho lộ trình năng lượng quốc gia bền vững",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUE0tdEhYS3lGN1YwcnJoZmItRDJDS3VQWl81TDAtc25peTZjVHJxNk4xalRDaDJseUtoZ3NUUlE4ZXQ2SGlvWnZ6MlFFekhqdDBDaTByNlA2bGJhV3E4T2FrRlkwWUZOdjVXMXAxeWlhNVhuR0dBYkFNci1DSzV5NGxSVUllUEgwamFTbUdWeUdIZ1NtUjBNaHpsZ1VCLWpEY1UwTlBKMl9jR3ZxQVpOZmFBVXBabnhRN0VOak5saHE?oc=5",
-      "pubDate": "2026-05-11T07:00:00.000Z",
-      "snippet": "Điện hạt nhân quy mô nhỏ: Giải pháp “nguồn nền” cho lộ trình năng lượng quốc gia bền vững  VnEconomy",
-      "thumbnail": null,
-      "source": "VnEconomy"
-    },
-    {
-      "title": "Đầu tư mạo hiểm vào công nghệ lượng tử Việt Nam: Góc nhìn từ quỹ đầu tư quốc tế",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORnRpU2tJZ2d6dW1uYWllY0puVmxzNXVCcXdpOWFCVWN1Q3d1VWF3LUQwOEhOTFRueExvZWZpa01sWkdONHVHUDA2NlJCOE91WGVDWTF0eEJzZnMyel85MjViZE5PTTQ3UTZ6TUpQR2NMZlVuM19QVWVxSVlJMkMwUzhQVUlZRFAyaGJDWFlKS1o1MjUxZUhsSXBNOWNzTmNXWWtUeG93THdZRnY5Y0FlQWdYM2F2UQ?oc=5",
-      "pubDate": "2026-03-06T08:00:00.000Z",
-      "snippet": "Đầu tư mạo hiểm vào công nghệ lượng tử Việt Nam: Góc nhìn từ quỹ đầu tư quốc tế  VnEconomy",
-      "thumbnail": null,
-      "source": "VnEconomy"
-    },
-    {
-      "title": "Triết học khoa học: Lượng tử - thông tin với vấn đề bản thể luận",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUHBwSTVrVEJtUTZEeFRkeUNzZ2JHX1ppSEt1ZUd1S3o4cHotN2xLZGVNcmVBb2E5cXpmMGxIM2NGRVpvSjEtTVEzMTQ3WEVHZ3BhYTRqbkhIbUZwN3JqN3FkaENvcTZaQ1dOUW04X0pybnRua2F1UXFVV3RUZE1QUnBTZlg4Y0ZkM1NJQkNOaWNGV0Nva1ZOb2x6WjR5b3c5bnlxV2dXa2twZXFmQUxySTdWMA?oc=5",
-      "pubDate": "2026-04-06T07:00:00.000Z",
-      "snippet": "Triết học khoa học: Lượng tử - thông tin với vấn đề bản thể luận  vnu.edu.vn",
-      "thumbnail": null,
-      "source": "vnu.edu.vn"
-    },
-    {
-      "title": "Ban Cơ yếu Chính phủ giới thiệu thuật toán chữ ký số kháng lượng tử VN-PQSign",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOUIxRlFfbkdNbWd5T0h5aDN3eENXaEZmLWlEc1FIb3JiUTNuMUdSSUlJY2FtaDZJSmR5RmVjUDNrS1F4UERnaWxXRHNXb0lZV2JSelRjZGdnN3U3QlYzOXdkTWw0U21HMkR1TGRybDM4WFBvN05CNkRDellUZklaY1FvSlI0dzVTd3dTTnJFNmVXX19MaWhoV0N3b1lMajFtckdGRnhvY2ZpajBjR1NjWkVwYW5pUENLR2VlQzlmaHVKMWVBajJCZm90QkhUYmI2UVRR?oc=5",
-      "pubDate": "2026-02-09T08:00:00.000Z",
-      "snippet": "Ban Cơ yếu Chính phủ giới thiệu thuật toán chữ ký số kháng lượng tử VN-PQSign  Báo Quân đội nhân dân",
-      "thumbnail": null,
-      "source": "Báo Quân đội nhân dân"
-    },
-    {
-      "title": "Học viện Kỹ thuật Quân sự: Chủ động tiếp cận công nghệ lượng tử trong quân sự - quốc phòng",
-      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOODU4SUluMTRjRU4tZ1BodHNFNVVobFU4UnJlS3Awdy0wckE0QjBoM2ZudEtZLXRmUTV5czRXWHRWSEdHQU02Ym9fSThGMEVWdy15MjNnOF9xTTRpQ1FkUFJQSTBmS1pYX0pBdkU5Z05KMmVZX05MZU1XRGh2aGNyZDZhOGE1bDdURHBwVll0MUdxclZscUh0TFRZUkQ4a0ladEU5Z1hSWDhUTWNpSVNadDhQekl2c3JpeWc0SWxkcVQ0RGhWcmZVRm5KM1FWTVROMDVsUU5DemtrZVNwaW9BdGRvZnplcktY?oc=5",
-      "pubDate": "2025-12-24T08:00:00.000Z",
-      "snippet": "Học viện Kỹ thuật Quân sự: Chủ động tiếp cận công nghệ lượng tử trong quân sự - quốc phòng  Báo Quân đội nhân dân",
-      "thumbnail": null,
-      "source": "Báo Quân đội nhân dân"
-    },
-    {
-      "title": "Swinburne Vietnam dẫn dắt xu hướng công nghệ tương lai với AI lượng tử, Bán dẫn tiên tiến và An ninh mạng",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxORXUwMFA5V0NEMUVvdUFGcDQ5SHZSWThhRXNZdFU5SVJtd29yUWxZMzd6NDFvaUF4SDg3NlVuOFVCRDV2bjV1VDZvZXM1SjFnY2ZlNkJIakV3Q3E4c2I5RE1zeGhaaFJpQ2ZuUmp4cUNGX0JGVkpBZXhKRVBhWTQ5NjlaSkV1UkNZeTBzelowa0kwR1czcktpdHdYZFRDMm5rQ3hQcXZza1QwbU84Z2dnSEh4c0NQanRNUk9DTS1OY1M0WHhEVzl5S3FwM21UWGUwWVZKWEdqbXY?oc=5",
-      "pubDate": "2026-04-14T07:00:00.000Z",
-      "snippet": "Swinburne Vietnam dẫn dắt xu hướng công nghệ tương lai với AI lượng tử, Bán dẫn tiên tiến và An ninh mạng  Báo điện tử Tiền Phong",
-      "thumbnail": null,
-      "source": "Báo điện tử Tiền Phong"
-    },
-    {
-      "title": "Hội thảo “Chủ nghĩa Tư bản kỹ thuật số và chủ nghĩa xã hội công nghệ\"",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZlNVWnVPclFrQklOelZ3SlFRQWdlV3hvdlc1RHkxZERtZHprWklBckZiZWNQR09idy05YU5zQ2RoTWhhczJXRXJIZjVYdnZqemo2dF8tNWFaWTd4RzRXY3FTZ3UxRElsSl91aGRKMkxNWklVRmtRLTRQNTlnWEIzVzRwTWI2bzJnMkZmeWdReGREOEEzb1ppY3czeHQ3bTYwY1NnWE8waXg?oc=5",
-      "pubDate": "2026-01-14T08:00:00.000Z",
-      "snippet": "Hội thảo “Chủ nghĩa Tư bản kỹ thuật số và chủ nghĩa xã hội công nghệ\"  Học viện Chính trị Công an nhân dân",
-      "thumbnail": null,
-      "source": "Học viện Chính trị Công an nhân dân"
-    },
-    {
-      "title": "Hội thảo “Chiến lược phát triển năng lượng sạch và khung đầu tư cho các khu công nghiệp cấp tỉnh”",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQLUhqUWlZSXNoVnhlbHJCV184b1ZEUDc2TXVtQ2lSczc3Q3BkYzlydWtDeHZUazNSdjFGY2dFTG10djR5MExTMDVUajkwZFU0eF9heEx2VmtOR1FDc0o1UDFNbnUycmU1eTNkeWIyOVJncUJrcWQ5WHY4bXY4Tk50dEVtMk9PNXhfbzdQVXQ4LXlxak5IUVIxSldsbnR1NG5PUERKcGZ5NlR4WU1ycXVFYVZ6ZVphLVpVV3hsdl9vMENGQW1CODVQRV9uYVRHUmlYakxF?oc=5",
-      "pubDate": "2026-01-14T08:00:00.000Z",
-      "snippet": "Hội thảo “Chiến lược phát triển năng lượng sạch và khung đầu tư cho các khu công nghiệp cấp tỉnh”  Báo Bắc Ninh",
-      "thumbnail": null,
-      "source": "Báo Bắc Ninh"
+      "source": "Laodong.vn"
     }
   ]
 }
