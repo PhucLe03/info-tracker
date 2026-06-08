@@ -128,10 +128,16 @@ async function run() {
     }
   }
 
-  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
+  const todayDateObj = new Date();
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(todayDateObj);
+
+  const yesterdayDateObj = new Date(todayDateObj);
+  yesterdayDateObj.setDate(yesterdayDateObj.getDate() - 1);
+  const yesterday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(yesterdayDateObj);
 
   console.log(`Starting news fetch for keywords: ${keywords.join(', ')}`);
-  const newsResults = {};
+  const newsResults = {};       // today's news
+  const yesterdayResults = {};  // yesterday's news candidates
   const parser = new Parser();
 
   for (const keyword of keywords) {
@@ -145,25 +151,26 @@ async function run() {
 
       console.log(`Fetching: "${keyword}"...`);
       const feed = await parser.parseURL(url);
-      const results = [];
+      const todayList = [];
+      const yesterdayList = [];
       const items = feed.items || [];
+
       for (const item of items) {
-        // Only keep news published on the selected date (today)
         if (!item.pubDate) continue;
-        let isToday = false;
+        let articleDate = '';
         try {
           const pubDateObj = new Date(item.pubDate);
           if (!isNaN(pubDateObj.getTime())) {
-            const articleDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(pubDateObj);
-            if (articleDate === today) {
-              isToday = true;
-            }
+            articleDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(pubDateObj);
           }
         } catch {
           // Ignore date parse errors
         }
 
-        if (!isToday) {
+        const isToday = articleDate === today;
+        const isYesterday = articleDate === yesterday;
+
+        if (!isToday && !isYesterday) {
           continue;
         }
 
@@ -179,31 +186,43 @@ async function run() {
         const source = parts.length > 1 ? parts.pop()?.trim() || 'Google News' : 'Google News';
         const title = parts.join(' - ').trim() || item.title || '';
 
-        results.push({
+        const articleObj = {
           title,
           link,
           pubDate: item.pubDate ? new Date(item.pubDate).toISOString() : new Date().toISOString(),
           snippet: item.contentSnippet || item.content || '',
           thumbnail: null,
           source
-        });
+        };
 
-        seenUrls.add(normalized);
+        if (isToday) {
+          if (todayList.length < 10) {
+            todayList.push(articleObj);
+            seenUrls.add(normalized);
+          }
+        } else if (isYesterday) {
+          if (yesterdayList.length < 10) {
+            yesterdayList.push(articleObj);
+            seenUrls.add(normalized);
+          }
+        }
 
-        if (results.length >= 10) {
+        if (todayList.length >= 10 && yesterdayList.length >= 10) {
           break;
         }
       }
 
-      newsResults[keyword] = results;
-      console.log(`- Success: found ${results.length} articles for "${keyword}" (skipped duplicates & older dates)`);
+      newsResults[keyword] = todayList;
+      yesterdayResults[keyword] = yesterdayList;
+      console.log(`- Success: "${keyword}" -> Today: ${todayList.length} articles, Yesterday candidate: ${yesterdayList.length} articles`);
     } catch (err) {
       console.error(`- Error fetching news for "${keyword}":`, err.message);
       newsResults[keyword] = [];
+      yesterdayResults[keyword] = [];
     }
   }
 
-  // Save news to MongoDB
+  // Save today's news to MongoDB
   if (db) {
     try {
       await db.collection('news').updateOne(
@@ -211,13 +230,77 @@ async function run() {
         { $set: { news: newsResults, date: today, createdAt: new Date() } },
         { upsert: true }
       );
-      console.log(`Successfully saved news for ${today} to MongoDB.`);
+      console.log(`Successfully saved today's news (${today}) to MongoDB.`);
     } catch (err) {
-      console.error(`Failed to save news to MongoDB:`, err.message);
+      console.error(`Failed to save today's news to MongoDB:`, err.message);
     }
   }
 
-  // Always write to local files so that the static export works correctly
+  // Handle yesterday's candidate updates
+  const hasYesterdayCandidates = Object.keys(yesterdayResults).some(kw => yesterdayResults[kw].length > 0);
+  if (hasYesterdayCandidates) {
+    if (db) {
+      try {
+        console.log(`Checking and updating yesterday's news (${yesterday}) in MongoDB...`);
+        const yesterdayDoc = await db.collection('news').findOne({ _id: yesterday });
+        const yesterdayNewsMap = yesterdayDoc ? (yesterdayDoc.news || {}) : {};
+        let updatedCount = 0;
+
+        for (const kw of keywords) {
+          const existing = yesterdayNewsMap[kw] || [];
+          const candidates = yesterdayResults[kw] || [];
+          const spaceAvailable = 20 - existing.length;
+          if (spaceAvailable > 0 && candidates.length > 0) {
+            const toAdd = candidates.slice(0, spaceAvailable);
+            yesterdayNewsMap[kw] = [...existing, ...toAdd];
+            updatedCount += toAdd.length;
+          }
+        }
+
+        if (updatedCount > 0) {
+          await db.collection('news').updateOne(
+            { _id: yesterday },
+            { $set: { news: yesterdayNewsMap, date: yesterday, createdAt: new Date() } },
+            { upsert: true }
+          );
+          console.log(`Appended ${updatedCount} news articles to yesterday's record (${yesterday}) in MongoDB.`);
+        }
+      } catch (err) {
+        console.error(`Failed to update yesterday's news in MongoDB:`, err.message);
+      }
+    } else {
+      // Local file-system fallback mode
+      const yesterdayFile = path.join(newsDir, `${yesterday}.json`);
+      let yesterdayNewsMap = {};
+      if (fs.existsSync(yesterdayFile)) {
+        try {
+          yesterdayNewsMap = JSON.parse(fs.readFileSync(yesterdayFile, 'utf-8'));
+        } catch {
+          // Ignore
+        }
+      }
+      let updatedCount = 0;
+      for (const kw of keywords) {
+        const existing = yesterdayNewsMap[kw] || [];
+        const candidates = yesterdayResults[kw] || [];
+        const spaceAvailable = 20 - existing.length;
+        if (spaceAvailable > 0 && candidates.length > 0) {
+          const toAdd = candidates.slice(0, spaceAvailable);
+          yesterdayNewsMap[kw] = [...existing, ...toAdd];
+          updatedCount += toAdd.length;
+        }
+      }
+      if (updatedCount > 0) {
+        if (!fs.existsSync(newsDir)) {
+          fs.mkdirSync(newsDir, { recursive: true });
+        }
+        fs.writeFileSync(yesterdayFile, JSON.stringify(yesterdayNewsMap, null, 2));
+        console.log(`Appended ${updatedCount} news articles to yesterday's local file.`);
+      }
+    }
+  }
+
+  // Always write today's news to local files so that the static export works correctly
   if (!fs.existsSync(newsDir)) {
     fs.mkdirSync(newsDir, { recursive: true });
   }
