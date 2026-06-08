@@ -28,6 +28,18 @@ function isVietnamese(text) {
   return viRegex.test(text);
 }
 
+function normalizeUrl(urlStr) {
+  if (!urlStr) return '';
+  try {
+    const url = new URL(urlStr);
+    url.search = '';
+    url.hash = '';
+    return url.toString().trim();
+  } catch (err) {
+    return urlStr.trim();
+  }
+}
+
 async function run() {
   loadEnv();
 
@@ -92,6 +104,30 @@ async function run() {
     }
   }
 
+  // Load previously fetched news URLs to avoid duplicates
+  const seenUrls = new Set();
+  if (db) {
+    try {
+      console.log('Loading previously fetched article URLs from MongoDB...');
+      const docs = await db.collection('news').find({}, { projection: { news: 1 } }).toArray();
+      for (const doc of docs) {
+        if (doc.news) {
+          for (const kw of Object.keys(doc.news)) {
+            const articles = doc.news[kw] || [];
+            for (const item of articles) {
+              if (item.link) {
+                seenUrls.add(normalizeUrl(item.link));
+              }
+            }
+          }
+        }
+      }
+      console.log(`Loaded ${seenUrls.size} unique previously fetched article URLs.`);
+    } catch (err) {
+      console.error('Failed to load previously fetched URLs from MongoDB:', err.message);
+    }
+  }
+
   console.log(`Starting news fetch for keywords: ${keywords.join(', ')}`);
   const newsResults = {};
   const parser = new Parser();
@@ -107,23 +143,39 @@ async function run() {
 
       console.log(`Fetching: "${keyword}"...`);
       const feed = await parser.parseURL(url);
-      const results = (feed.items || []).map((item) => {
+      const results = [];
+      const items = feed.items || [];
+      for (const item of items) {
+        const link = (item.link || '').trim();
+        if (!link) continue;
+
+        const normalized = normalizeUrl(link);
+        if (seenUrls.has(normalized)) {
+          continue;
+        }
+
         const parts = (item.title || '').split(' - ');
         const source = parts.length > 1 ? parts.pop()?.trim() || 'Google News' : 'Google News';
         const title = parts.join(' - ').trim() || item.title || '';
 
-        return {
+        results.push({
           title,
-          link: item.link || '',
+          link,
           pubDate: item.pubDate ? new Date(item.pubDate).toISOString() : new Date().toISOString(),
           snippet: item.contentSnippet || item.content || '',
           thumbnail: null,
           source
-        };
-      });
+        });
 
-      newsResults[keyword] = results.slice(0, 10);
-      console.log(`- Success: found ${newsResults[keyword].length} articles for "${keyword}"`);
+        seenUrls.add(normalized);
+
+        if (results.length >= 10) {
+          break;
+        }
+      }
+
+      newsResults[keyword] = results;
+      console.log(`- Success: found ${results.length} articles for "${keyword}" (skipped duplicates)`);
     } catch (err) {
       console.error(`- Error fetching news for "${keyword}":`, err.message);
       newsResults[keyword] = [];
@@ -155,6 +207,24 @@ async function run() {
   fs.writeFileSync(outputFile, JSON.stringify(newsResults, null, 2));
   console.log(`Successfully saved today's intel to: ${outputFile}`);
 
+  // Fetch all historical news from MongoDB and write them locally
+  let availableDates = [];
+  if (db) {
+    try {
+      console.log('Fetching all historical news documents from MongoDB...');
+      const docs = await db.collection('news').find({}).toArray();
+      for (const doc of docs) {
+        const dateStr = doc._id;
+        const filePath = path.join(newsDir, `${dateStr}.json`);
+        fs.writeFileSync(filePath, JSON.stringify(doc.news || {}, null, 2));
+        availableDates.push(dateStr);
+      }
+      console.log(`Restored ${docs.length} historical news JSON files from MongoDB.`);
+    } catch (err) {
+      console.error('Failed to restore historical news from MongoDB:', err.message);
+    }
+  }
+
   // Sync keywords list back to keywordsFile
   if (keywords.length > 0) {
     if (!fs.existsSync(dataDir)) {
@@ -162,17 +232,6 @@ async function run() {
     }
     fs.writeFileSync(keywordsFile, JSON.stringify(keywords, null, 2));
     console.log(`Synced keywords list to local file: ${keywordsFile}`);
-  }
-
-  // Get available dates list from MongoDB
-  let availableDates = [];
-  if (db) {
-    try {
-      const docs = await db.collection('news').find({}, { projection: { _id: 1 } }).toArray();
-      availableDates = docs.map(doc => doc._id);
-    } catch (err) {
-      console.error('Failed to query dates from MongoDB:', err.message);
-    }
   }
 
   // Merge with local dates to keep summary complete
