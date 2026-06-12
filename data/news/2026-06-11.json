@@ -1,5 +1,22 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Uy thế của máy tính lượng tử",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5tZGxuVVhBcFh0cS1hR05oN2pPUGdiU1ZrYXRXdG9uRXk0R2pyLUZUV2ZPMTlQMExrUHpYUTN3dGpXeDdEUGhhYzlIR1BYVUFjLTYtOUx4clluNUVtT1BxUDg3YmZ2NGtYZlJQOVV1TQ?oc=5",
+      "pubDate": "2026-06-11T15:33:06.000Z",
+      "snippet": "Uy thế của máy tính lượng tử  Znews",
+      "thumbnail": null,
+      "source": "Znews"
+    },
+    {
+      "title": "Italy khánh thành máy tính lượng tử 54-qubit tại CINECA",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMTE4dlRXdm9nbVdoODd1M3ZYWFJWVW5sa1lVaWNuYjJNT1lLb3pTLXVCQUtDcVZpZjZpMkNRZHFVWkt3WHJpaFV3amU1MTBwRThwUDZXUnpqOWFIbU9wQktUSUZfLVpERnBjcFc3MTJ3NFhzbUx4ZzV2Qi1xNThYRnBxZ2I3eWk5YWVGVTF0QkZsTEtmTHBmWXFpTDlFU2VkUjJTZUUzZkRnQ2JTRFZv?oc=5",
+      "pubDate": "2026-06-11T13:03:00.000Z",
+      "snippet": "Italy khánh thành máy tính lượng tử 54-qubit tại CINECA  Investing.com Việt Nam",
+      "thumbnail": null,
+      "source": "Investing.com Việt Nam"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "Xây dựng mô hình trung tâm đổi mới sáng tạo theo bốn trụ cột chiến lược",
@@ -40,7 +57,96 @@
       "snippet": "Cần Thơ thúc đẩy liên kết phát triển hệ sinh thái đổi mới sáng tạo  vov.gov.vn",
       "thumbnail": null,
       "source": "vov.gov.vn"
+    },
+    {
+      "title": "Hội thảo Phát triển kinh tế-xã hội dựa trên khoa học, công nghệ và đổi mới sáng tạo",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQnpnUHVVMjMta2RIdllaYmFMdjRfdkZ5Ynp6LW52alpFN3RLczhDNm0tTGhmeF9ibm9mXzBOSFc1SWt5RUxaQzRQd0s3WGY3dTNvdzdmRXhwVnQzYkMtTVRpVkVTanRzSUYteXktVzk1Q29sSDFVZjk3RzB4UUFNeUR0VWNMYlBYVlFYcllsZlR3OHhST21qT3hIOFQtRzR2NFBoZlM0bUVHYVZocU10OUtkNmJPNWJ6?oc=5",
+      "pubDate": "2026-06-11T10:28:38.000Z",
+      "snippet": "Hội thảo Phát triển kinh tế-xã hội dựa trên khoa học, công nghệ và đổi mới sáng tạo  Báo Nhân Dân điện tử",
+      "thumbnail": null,
+      "source": "Báo Nhân Dân điện tử"
+    },
+    {
+      "title": "Hội thảo khoa học phát triển kinh tế - xã hội dựa trên khoa học, công nghệ và đổi mới sáng tạo: Lý ...",
+      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxObG00UElSU2s3SktsNU51bjcydGZYTHZuR0tKdHFncmFfd2pyclVOLUpYWkVfYlZCLU04Mjd4eXF2QTIza1B3YmFaOXQ0aVZPdDNyYkNjSVZyWDEwYUZPXzIxX0xFR3RtMEVFN3R5ckZpRXZYU3JYZXFxbUN1ckNRbk10dUlmUUpQUmVhdkJWWGF5dkw2SG1NZ3VSRE4xb0tIcmx2bzJTSmhaUmhQMHZ1aWs2X2FjOFZwcm02ckFrb3pPZlVXcFM1TktpSDN5T3R0b2psaGJJQll4QThTUWdQNFJ1ak40NFlVcDhUd2FVLXBKVUQ4Q0hQYllkZ1lhQTcwMzJWN0swVmZSUXM?oc=5",
+      "pubDate": "2026-06-11T05:20:00.000Z",
+      "snippet": "Hội thảo khoa học phát triển kinh tế - xã hội dựa trên khoa học, công nghệ và đổi mới sáng tạo: Lý ...  dangcongsan.vn",
+      "thumbnail": null,
+      "source": "dangcongsan.vn"
+    },
+    {
+      "title": "Hội thảo “Xác định danh mục các bài toán lớn về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số”",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMXhyVWdZSDl6Z2xxYUt5LXVlLV8zSm9aa3NfUWFDaXk4aGttSFlfbHFGMm0yZElhd1UtZ3BnTElTelNXMmx0ZkRfNWV3aTlEQnZHUVFtVU1TT0J0V1BfMXAzUkNoTXhhZ1VWMWtLeTBod1Y3YjFTcHUyYzFMQjhZRjdzRG1pdldoaXRoekktcHZXN1Z4OE9KUnZSc2NwNXJ2b2RXU1hJNS0xbHZmYnJkUkplc3ljWl9EcHJKOTlFU3Q5anh2VzB4WVJZN1cycTBTVjF2N0VUczVPb25WQWFEY1AyZ1daQURYYlBZZVBpekt3dDdWUnc?oc=5",
+      "pubDate": "2026-06-11T15:08:36.000Z",
+      "snippet": "Hội thảo “Xác định danh mục các bài toán lớn về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số”  Truyền hình Thanh Hoá",
+      "thumbnail": null,
+      "source": "Truyền hình Thanh Hoá"
+    },
+    {
+      "title": "Hội thảo khoa học quốc gia về điểm mới trong Văn kiện Đại hội XIV của Đảng",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaFBRSThuSm44TUVLcm96d1NuenRPdW9QTzFMd3cyUHJnU3RNTlhJQjcxOEJCaU82c2JnLUFfR2Z1VFBCcTE0ZGJMZWs4M2VlQ0VGN2xzbHptU09aUGxSS21WaHlwVWhldjkzclNXV1o1NzB0TjBHbml1X3pQWTV4bXFqb1NCNFBDU3V2UmRkQkdVT2JlOU5rQ2lDOWxyLTRLM19V?oc=5",
+      "pubDate": "2026-06-10T23:18:00.000Z",
+      "snippet": "Hội thảo khoa học quốc gia về điểm mới trong Văn kiện Đại hội XIV của Đảng  Báo Đại Đoàn Kết",
+      "thumbnail": null,
+      "source": "Báo Đại Đoàn Kết"
+    },
+    {
+      "title": "Hội thảo “Xác định danh mục các bài toán lớn về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số”",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSHlvZWpqQk1QY21tUDVrUktMNC1qOGF4eUs3UFE2REtFY080VDlCWWI5WUY0Mkd0N2prWTJlQmRVVHFkQVFYeEZ5Z3dlTmMwRkNlR0xGOXBLMUxoZDVLdUZWeU84VnExYy1HM2hjWDJoUGx3VjQ0RFloaFJvcUJhVmJBVl9CTFZNZ2FXNXo0cEIxLVhaNG14SFN6V084a25KNXAxRXBtTXd3ZDRycVRoRkJTcFFoUFJRNzB3WnhmbUJGS1dPUTRUa0xldS1aQTRtenEyRmpzTUNHbU9q?oc=5",
+      "pubDate": "2026-06-11T07:04:00.000Z",
+      "snippet": "Hội thảo “Xác định danh mục các bài toán lớn về phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số”  Báo Thanh Hóa",
+      "thumbnail": null,
+      "source": "Báo Thanh Hóa"
+    },
+    {
+      "title": "Hải Phòng kiến tạo động lực tăng trưởng mới từ khoa học, công nghệ",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN3g5eDgtajNvS29MLThqSXBrX09iYVpFajhFa1BoSjk2Qm5wa3BIUUp5Q0xiX0Q1bGpENGJ1NG51ekpsd25ET0x6V2NGMjRYaWRtU0tONkVla0llYmhfYkVkdXNkM09kMllHQ2dUZmJFMmZYQVBLQ1BfSUJFWUE1bXZONEhXdGl1Ymx4aUdzcU5uMi0yanlzX3djbmNsZUpydU5xc3hhT01ub25rSmRQWEtn?oc=5",
+      "pubDate": "2026-06-11T07:57:00.000Z",
+      "snippet": "Hải Phòng kiến tạo động lực tăng trưởng mới từ khoa học, công nghệ  chinhsachcuocsong.vnanet.vn",
+      "thumbnail": null,
+      "source": "chinhsachcuocsong.vnanet.vn"
+    },
+    {
+      "title": "Thạc Sĩ, Bác sĩ Trình Ngô Bỉnh tham gia đội ngũ Khoa da liễu – Trung tâm điều trị & Chăm sóc da bằng laser FV",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQzZaTUxWNkJPRnl1bDdZYThteVVBZDdzNE9DekpyMDRsdlJ4ZnlXX3B2cjEzSC1mc3pZa0w2aWw1N1dLT244cTFqRnliekZHM3RvNVl4MHZfMUZPbE8wdFBqMWc2V0N2TTREeDhKRmZubGtsYXRZNUVmUVMtUEhmbE01Z3lGSW1LQmllRVN5THlzV0d6NWVDU29qZFhTX202eDFjeFBzTGdrTXJla2ZaTFBPUjRmanNtTWVTeUhDcmRkRFQ0R1RxVHpha3h2YmlCVlhN?oc=5",
+      "pubDate": "2026-06-11T16:06:30.000Z",
+      "snippet": "Thạc Sĩ, Bác sĩ Trình Ngô Bỉnh tham gia đội ngũ Khoa da liễu – Trung tâm điều trị & Chăm sóc da bằng laser FV  Bệnh viện FV",
+      "thumbnail": null,
+      "source": "Bệnh viện FV"
+    },
+    {
+      "title": "Hội thảo khoa học quốc tế Văn hóa và giáo dục lần thứ V - ICCE 2024",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQzFMTzl6NEpuUDNUcGxOQkdERzN6RTA5bVFoZFJ6VHZncHRSb2dic1REODkwcXh0eVpRYTNZRGR1QXRWT3J3cDZtcERvXzhINUUwUExseS1MU3hKb182Ny1RX2VkMURSM3pmU0c0a3E0QUdnckZtamFGZjFHallYZEdvSlJEalh3cDBKbmY5ZVNvUQ?oc=5",
+      "pubDate": "2026-06-11T08:20:15.000Z",
+      "snippet": "Hội thảo khoa học quốc tế Văn hóa và giáo dục lần thứ V - ICCE 2024  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Hội thảo Xây dựng thí điểm mô hình xã, phường xã hội chủ nghĩa trên địa bàn tỉnh Lào Cai",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQTMwZldock9fSm9xYXk0LXh0RVh3ak8xQmNFbTUtbVFnNDVEdEEwbVdiTTN1aUg4ZW04YXl3MVQ1YXpmV05zNE5ES2gwRzJPMWFZbWdKVWZRSjUtZnhfVUhZX2lONDRpM1JOR2NIb3NCZTlRRFR3RjR3X3NIOEJMaDFvek1sb2hNbzc2eFB3T3NEOWotUENFbEUtYjItb3F0VUt3ZmV0a3VILW5tM2c1cHdLYVNSX1RrWm5iMGp2Smc?oc=5",
+      "pubDate": "2026-06-11T01:57:01.000Z",
+      "snippet": "Hội thảo Xây dựng thí điểm mô hình xã, phường xã hội chủ nghĩa trên địa bàn tỉnh Lào Cai  baove.congly.vn",
+      "thumbnail": null,
+      "source": "baove.congly.vn"
+    },
+    {
+      "title": "Kiến tạo động lực tăng trưởng từ khoa học, công nghệ và đổi mới sáng tạo",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOazV4YTZHazRnSnJZLWpIUXd5a3lPZDZKTlI2S0dGV2J3Z25PcmVfaE01RG5pSTBlWnU1dVdKWXpOT2dXbmd2T2NMOXNHVkRZczdIdW42VmFQTXlNT2V0bWNpczlIS3didTdyZkk0VjEtWHJySWFxSktZZWgwNTd2dThfUHdPSmJETy1wdFdXV0N2TDljVHBQRWo0NHZVeUh5WV8xdUlseHlEUQ?oc=5",
+      "pubDate": "2026-06-11T08:56:01.000Z",
+      "snippet": "Kiến tạo động lực tăng trưởng từ khoa học, công nghệ và đổi mới sáng tạo  baohaiphong.vn",
+      "thumbnail": null,
+      "source": "baohaiphong.vn"
     }
   ],
-  "Hội thảo lượng tử": []
+  "Hội thảo lượng tử": [
+    {
+      "title": "Năm Lượng tử Gia Lai 2026 hướng đến quy mô quốc tế",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbFZvQTJ0U1hfVmo0ZmxKanRvNnh0SUhObkQ0aGUtQ2xaR1JVRUxiZURBSHRDS3U5X0RKRWxEbUY5OTFhdy11WFVUUnM0b3JhYmVOODZ4OW1qYmVZaGhGLTFCeGFmNDZDTWQ0enMtWldDOGR4aDdSM0t4QXJVQ2RjLURTLVc3VVVqVlE?oc=5",
+      "pubDate": "2026-06-11T09:18:01.000Z",
+      "snippet": "Năm Lượng tử Gia Lai 2026 hướng đến quy mô quốc tế  Một Thế Giới",
+      "thumbnail": null,
+      "source": "Một Thế Giới"
+    }
+  ]
 }
