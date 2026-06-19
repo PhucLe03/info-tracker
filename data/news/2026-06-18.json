@@ -1,5 +1,38 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Amazon: Máy tính lượng tử hữu ích sẽ xuất hiện trong 5-7 năm tới",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPd3F1Ti1uNGNXNXc1V1RZek5LRFlwZzBOVUx1MnRickV6X0dJQjM3SkNDX0xlS1N3RlE5SVFZdUQ4LVZRV1BJOF9mbzlVbWVtUkszRmNlelN0Q1JHQ3QzcVczLUtFVGszbWpJUlg2ck5hR0dIOVF0NUFDbGF5OWlhV0hOeEg2cEVmWl80Si1tdnZORzRnLVFN?oc=5",
+      "pubDate": "2026-06-18T11:00:00.000Z",
+      "snippet": "Amazon: Máy tính lượng tử hữu ích sẽ xuất hiện trong 5-7 năm tới  bnews.vn",
+      "thumbnail": null,
+      "source": "bnews.vn"
+    },
+    {
+      "title": "Máy tính lượng tử sửa lỗi có thể xuất hiện vào năm 2028",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVFl1RFg4aXpkVmpDU0NXcU9IT3VlbEd3QnVxNTBsMmVGeDliRkZ0Y0hqSFpsdm5BcHQ4bktoNXdyamZ3NHZZRXNfQXZNenBQM1hiaXdVbVMtWF9WUzN1cndPT19MSFdZVlpFZlJzRmRqY1k0VDI4aTRNZkFEMkY1cjVuckt2MDkzR1FDTGg5dWN4QkEzVjY4Uw?oc=5",
+      "pubDate": "2026-06-18T14:59:00.000Z",
+      "snippet": "Máy tính lượng tử sửa lỗi có thể xuất hiện vào năm 2028  VTV.vn",
+      "thumbnail": null,
+      "source": "VTV.vn"
+    },
+    {
+      "title": "Quantum X Labs ra mắt chương trình điện toán lượng tử tích hợp",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPM0Z2WFhRVG5sLWpRb09YdEkyaXZCVWRUSXJ5Y19zRDVPQ0tSUnpHOWI3ZzFNQVlwUHVHVDZ0VEhwVUtRc0Q5cUZPRzJvU0ZiekZHa3U5aklEZkNKNjFrY0lZdHR2WlZEQms3bEpUd3dyMVZxTmxtYVJGNGYyQlJSYVlCWGZWdDdxMGtMQ3VkdjhtOWd6NFBTZWlBZ0xoaW1McEZaMkN2OXdSMXBFQlJQQ2VnVFNlc3l0NXc?oc=5",
+      "pubDate": "2026-06-18T12:43:00.000Z",
+      "snippet": "Quantum X Labs ra mắt chương trình điện toán lượng tử tích hợp  Investing.com Việt Nam",
+      "thumbnail": null,
+      "source": "Investing.com Việt Nam"
+    },
+    {
+      "title": "TPHCM chuẩn bị cho kỷ nguyên hậu lượng tử: Bắt đầu từ bài toán thực tiễn và an ninh dữ liệu",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTGo5Q01vZHNBdzJKeU05TFh2dFFnckU4MVR1cVk1SG5QeGFfdFI2b280UHZmWF9TWGRXZ3ZKd3B4OFh6eFN6VUZMeFpQQ3BLLVRSN01KUnJPcm5kWkdFZnFlSnZsdy01SkhDNkQ3MjV3eDZaRUQyaTBTbmF4OWtHd0RHejdDankyTll3WnROdEhoYVNuaGozNGtEQ25mMTl1Vl9vazBaQzFyY016TEFfWFJlNHZOQnl6Y3B5UHpvMjFvdzF5dm5aNmQ0UGg1SkktV3JpTFlyWQ?oc=5",
+      "pubDate": "2026-06-18T04:18:30.000Z",
+      "snippet": "TPHCM chuẩn bị cho kỷ nguyên hậu lượng tử: Bắt đầu từ bài toán thực tiễn và an ninh dữ liệu  VOH",
+      "thumbnail": null,
+      "source": "VOH"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "Hội thảo khoa học “Hoàn thiện và nâng cao chất lượng, hiệu quả hoạt động của Cổng Pháp luật quốc gia”",
@@ -72,6 +105,86 @@
       "snippet": "Giải pháp Xanh để bảo vệ môi trường và phát triển bền vững ĐBSCL  Tạp chí Môi trường",
       "thumbnail": null,
       "source": "Tạp chí Môi trường"
+    },
+    {
+      "title": "Hội thảo khoa học quốc gia “Thanh tra, giải quyết khiếu nại tố cáo, phòng chống tham nhũng, lãng phí tiêu cực trong kỷ nguyên mới”",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxObjgyUWFndG5sY0o4RS12aGhZeTRhSHJOaWhDdC00MlNUWkFnSjBzNmZnVnd2Nm5yakFoaXN6X2o1NjdrWFpOMWlOdHZXZDhCVW9QM2lWRm1la1lYMlV0V2NCcnQtVm1IbzFfVjVYcTRpMktLQXlXdlVhNDA2WjR4MG5uUGFyTEY0amk0MWI4dFl4MFN0VHl6NzZVQm1wajVWa2tGMzYydkl1RUY2RU82VTJHSjZsSXlFTXZCaXgwckpQVE9kZ2ExTS1Pc2Ruc3ZLMFlDWllIb2d6bWZIbGJWLUVDZnVfbWsxSVhDQ3gzM2l4VXFwVEtURnRBRF92emV0Ui00NkhVOXExZGpUbVZj?oc=5",
+      "pubDate": "2026-06-18T14:35:41.000Z",
+      "snippet": "Hội thảo khoa học quốc gia “Thanh tra, giải quyết khiếu nại tố cáo, phòng chống tham nhũng, lãng phí tiêu cực trong kỷ nguyên mới”  Báo Thanh tra",
+      "thumbnail": null,
+      "source": "Báo Thanh tra"
+    },
+    {
+      "title": "Gần 200 đại biểu tham dự Hội thảo khoa học quốc tế “Các vấn đề nghiên cứu về khoa học kỹ thuật”",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSXJmRzd4d1YzeW1yaGk2b1huWlQ2ZlFyZGdjMHBMZ0xNVmdqSzFGcGtyYXh0ZHZMQXpyTXlpaUR6ZXJpbGhCeUctak4xZnlUN21QT2NtTmRnQmJibDA3NnpTU3BUaWktRzk2cjR0NllBd1ZDNnJEcVh0S3lvblNWTjZZTDJqc18tbU1XRE8zRnVQdkF5X1dIVFRPX0pFdUEwVDJIeDRDWkRJVWhYMTJaTEVtbTBCcTZsU3VrczZoUzA4dlhfa01TcnBKNk4?oc=5",
+      "pubDate": "2026-06-18T10:31:00.000Z",
+      "snippet": "Gần 200 đại biểu tham dự Hội thảo khoa học quốc tế “Các vấn đề nghiên cứu về khoa học kỹ thuật”  Báo Cần Thơ",
+      "thumbnail": null,
+      "source": "Báo Cần Thơ"
+    },
+    {
+      "title": "Hội thảo khoa học cấp Bộ “Vai trò của báo chí - truyền thông trong công tác xây dựng Đảng hiện nay”",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbFRpM1F4SnI5aXEwcllXbzBMTjlWQ1ZDNlBkZVdIdXhLWjFIQ2JXbGt4T0tnSUZ5QlQ2TkI5V2dETDA3S2VMcnJ5aXVGcVdvMnVWbTExSFJqbHpueGo2RU9ta25pZG04ZEdBRlhWcUxSdHNVRkpwZktpSWV4Y2Jrd0p0SmRuNHFwaDlEWWlPWWFMRkhrQi1HbnZSZm5rT1lnaTA0a2JWOHA1bWlZUU8ybXlnVWJldXFhblJVOTZzTDdSeWpIblE?oc=5",
+      "pubDate": "2026-06-18T13:28:00.000Z",
+      "snippet": "Hội thảo khoa học cấp Bộ “Vai trò của báo chí - truyền thông trong công tác xây dựng Đảng hiện nay”  Học viện Chính trị Quốc gia",
+      "thumbnail": null,
+      "source": "Học viện Chính trị Quốc gia"
+    },
+    {
+      "title": "Hội thảo khoa học cấp Quốc gia: \"Một số vấn đề lý luận và thực tiễn về hoàn thiện mô hình chính quyền địa phương hai cấp\"",
+      "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOcGE0bUN6T3JFRHl4YVpnTHZIRzZ2UTFndklvVURoVkhSb0s0U0lZMU9LU0FmUmJwaTg0bzNseDg3SEw4bzFTeEh4QWFtcWk3TXBtSEtlVkI0RkFYd2l4LVlYdHJBWmRKNVJScW50RVZfYW1QdDBhcU5MU0lkMldSRGhWVXZlRmpuQmxmNmNzc0lfV1JTUFhEdVVWWmFhQ3drRmlKaE02ZE5LUG1BUUZMY29ud3pmWWxrVHJYTWpJUjFsYjJWNnpTUVRZZE5OWFFwWGd2ZjJ6WE1NMUJZQm8zQU8xUHNDWklXc0ktRWVaM1BweVZYWkFvU2h5VXJmeGF1clVkQnNQZi03YThQSTBKVGJ3?oc=5",
+      "pubDate": "2026-06-18T14:47:24.000Z",
+      "snippet": "Hội thảo khoa học cấp Quốc gia: \"Một số vấn đề lý luận và thực tiễn về hoàn thiện mô hình chính quyền địa phương hai cấp\"  hanoi.gov.vn",
+      "thumbnail": null,
+      "source": "hanoi.gov.vn"
+    },
+    {
+      "title": "Khai mạc Hội thảo khoa học cấp quốc gia \"Thanh tra, giải quyết khiếu nại, tố cáo, phòng, chống tham nhũng, lãng phí, tiêu cực trong kỷ nguyên mới\"",
+      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOYTU3SGZ2OEd4NnFld1cwY3p4dVJlSGg2U05YZGIxbjdXd3pRV0l5Rm5wdm9ZZzRfdXFRQ1RYWWk1RFNGQk9MSUFkMS1iOEM4anhrdVo1YjJad3FDZENyMDRpMDhsUzFwdUtEeVU1elZkV2Q5ckp4Q3pKakYzdlF2c1o3RXMzTW1EcnhvT2ZRSXVhLUx5VW0tUGhaOUw5VFpPdTZVcG5WZlUzV3IxekMyeHVBdUNFcVh5bl9LTEVrb0I4aVV3alNobkU3bHAybjBQbW9OWmlhcFZLUUQyd3RCNW52R2k4TUlyZEg4eWlUUTRDLXFlc25CVEw5ZVFnSVJqczBNUQ?oc=5",
+      "pubDate": "2026-06-18T06:54:34.000Z",
+      "snippet": "Khai mạc Hội thảo khoa học cấp quốc gia \"Thanh tra, giải quyết khiếu nại, tố cáo, phòng, chống tham nhũng, lãng phí, tiêu cực trong kỷ nguyên mới\"  Tạp chí Dân chủ và Pháp luật",
+      "thumbnail": null,
+      "source": "Tạp chí Dân chủ và Pháp luật"
+    },
+    {
+      "title": "Hội thảo khoa học \"Cập nhật những bằng chứng mới trong điều trị giảm tiểu cầu miễn dịch\" - Viện Huyết học",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdkswWlRZeVNWNmJ6Wl9iMk5qcS1KWHZNRVVxeldfdlZVWDl4cUNYdDVKMElhV0VURlg2dE4wQWxXQlRtY1NDRDRaQ01QYjBVRWZvXzZJOTNZaXhfaGdQTUhEWmRQNUd4MFB4bzRFSFhkTXNUQ1VCUjhZNDdmMGNWVDlGVU8wYXJYb2hZekJnVElQOTdvV01wOXhQWjFycEJVZUJPeXNjODI0clFvLXNkQg?oc=5",
+      "pubDate": "2026-06-18T07:59:03.000Z",
+      "snippet": "Hội thảo khoa học \"Cập nhật những bằng chứng mới trong điều trị giảm tiểu cầu miễn dịch\"  Viện Huyết học - Truyền máu Trung ương",
+      "thumbnail": null,
+      "source": "Truyền máu Trung ương"
+    },
+    {
+      "title": "Hội thảo khoa học góp ý dự thảo Quy trình đeo, tháo thiết bị giám sát điện tử; xử lý cảnh báo; quản lý, vận hành hệ thống giám sát điện tử",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNa3FQeHhlNjlwSnVpX1dqMHVXTVlkT0lzbFd3dG5KemNpQVNpMFd4QXFEdEliTjdTSlluT09xUDVyV1F1Sm5ZX1B0d2JDV2s0T0kwREhuRVFHOGpST3B4cWpWd1JVRnQwUFBLUE9kNnpBTDFhSmJ1SkJMZGpwYkFicGRiV3l4SkwxYmdiTUtxYzZQeUpQQzAzaXNudXBhWE5QQkhyczZnaXlmcVptUThteXZvZF9oSXVMTlc1dEtuZkh1ZGo0NTVkZVJKUQ?oc=5",
+      "pubDate": "2026-06-18T02:58:00.000Z",
+      "snippet": "Hội thảo khoa học góp ý dự thảo Quy trình đeo, tháo thiết bị giám sát điện tử; xử lý cảnh báo; quản lý, vận hành hệ thống giám sát điện tử  Học viện Cảnh sát nhân dân",
+      "thumbnail": null,
+      "source": "Học viện Cảnh sát nhân dân"
+    },
+    {
+      "title": "Phát huy vai trò của tạp chí, truyền thông và xuất bản trong kỷ nguyên mới",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcFI1aG9Ka3FRaWw5SGJNX1JoSVppT05JdGxvMXpRZ2k1U210M2R4TXJFQVVSWU1vV3RNeUVRTkpWVmhfZmdYaWVQRTJaSmVBcHB6V05BcEFYc3ZKYVQxZENBUERsU3FmaU5DcDgtdUJCYkN0d1hmNWdXc293TmhDNG5aZ3ZJbkJlRF95YmpSczA0VEhZajZmd1BmVVE2dWtBcU4wQm9TX3ppeTdz?oc=5",
+      "pubDate": "2026-06-18T12:07:43.000Z",
+      "snippet": "Phát huy vai trò của tạp chí, truyền thông và xuất bản trong kỷ nguyên mới  Báo Nhân Dân điện tử",
+      "thumbnail": null,
+      "source": "Báo Nhân Dân điện tử"
+    },
+    {
+      "title": "Gần 200 nhà khoa học, chuyên gia dự diễn đàn học thuật thường niên ĐH Trà Vinh",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPS2ZuSEdNUWF1aG1maVVRb2Q1b2Z6V2hWZl9seF93N1J4THJkaG95VVdiYzlRTnVFejZ4LUMydGozUnJlUjhCd2VrdmlQX09RendQSmMzaXFxaDk5MTNXbGZwRllTX2pFbElNV0NlLUFLYnp4YmdVa0FkLTFrbDJuSnVTLXh5MVVRUWh2V1FUbzItSW9xb2lrQlowVm1DdlZ2UVgyZlMxTnZ5czBfRC1vUEMyRHlQY2RjNVJj?oc=5",
+      "pubDate": "2026-06-18T09:51:32.000Z",
+      "snippet": "Gần 200 nhà khoa học, chuyên gia dự diễn đàn học thuật thường niên ĐH Trà Vinh  Báo Giáo dục và Thời đại Online",
+      "thumbnail": null,
+      "source": "Báo Giáo dục và Thời đại Online"
+    },
+    {
+      "title": "Hội thảo khoa học quốc gia: “Thanh tra, giải quyết khiếu nại, tố cáo, phòng, chống tham nhũng, lãng phí, tiêu cực trong kỷ nguyên mới”",
+      "link": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxNUTVwQkc0eUp6R3JGbU9Wdm1ub2RBRVdfM1ROV2NwRDFoN1NLVWFtYnJjVHgySFFoeWZVYlJ3Yk0zRnA3SmRYM1RtZkRnNzdYOTI5WjFOZmN5YmN2bmZuaUFFTkJ2Vkw5SV8zZjJEbmJ6R3VXc2t3azVLMEoxSjctRFAxQ3UybWF6MTNsYXZOVWdFNGNUWWF4TVVZUTNhcmU0dzJ1Sjh6c2ZGMXlvNzdsUTBMZl8xQTJ5Ri1ZTkRsRHRzZ19xU2I4YlVEYWJ3MzVSSk9vai1zZ1NZcmlINmw5UGMzamFSU1BKTHFNemVvUzNSZnBqRk1yREhHeGNjcmVCX3VQMG9EZ2VxNWVOMjZlM2dsQmFUUHY3cm1pbzA2dnN5X1lPS2F1YlRzWF9OTVRhQ01KYTNKVmN1MTYzU3NPUHNNeG1xb1J2bDNHTXdsWjc2TmQ0Sk9qdmhyMGl6ZnlWTS1FNFhxSjZzUWlXWm1KVk1rX3pTQ1pGQUo0Z1l6dkZlR3RwN0k2WDlOVWRVY2FBcWowWEw4UlBnRXNjVFFLM0JGeWMxdDg5cFduaHV0Vl9kcmtSNEhaOGJ2SVdtWmdjeUpQSmd1ZmhwT3lKUjF4U1VHYkt5dmMwUlZleWhvOVdMWWUzY0d1dmJ1QUc3eXg4anE5bVpn?oc=5",
+      "pubDate": "2026-06-18T07:16:47.000Z",
+      "snippet": "Hội thảo khoa học quốc gia: “Thanh tra, giải quyết khiếu nại, tố cáo, phòng, chống tham nhũng, lãng phí, tiêu cực trong kỷ nguyên mới”  thanhtra.gov.vn",
+      "thumbnail": null,
+      "source": "thanhtra.gov.vn"
     }
   ],
   "Hội thảo lượng tử": [
