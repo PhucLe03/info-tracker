@@ -1,5 +1,63 @@
 {
-  "Tính toán lượng tử": [],
-  "Hội thảo khoa học": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Chiến lược công nghệ lượng tử nhằm bảo vệ chủ quyền công nghệ, tích hợp không gian số toàn cầu",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTGluZGh5b2Voell1U3MyUnV0dnhpOWstV0MzcHFZSFhJSlB3dFNBaTNfeE5aanZpaUxvOTZQMktBRE1rTnlOR3ZYVUF2LUtnTVROd2NVa2YwcE9fWTRjdGg5bzFyRjQwVHpiM2QwYWY2Ri1mTE5sdmJXZmJPdWFLcGhSQV9iTENXMnRvblVqU2t0aTdkOXo5MFZKUGk2STFFZWltazh6di04R0ExZEJDdjJ5aGJraDA?oc=5",
+      "pubDate": "2026-07-06T09:44:28.000Z",
+      "snippet": "Chiến lược công nghệ lượng tử nhằm bảo vệ chủ quyền công nghệ, tích hợp không gian số toàn cầu  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Viễn thông và kỷ nguyên lượng tử",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1vbVFnQ2lKVVpwRThWeVpPbjFyZ3dTTEg4d1FBaGRNMExFU0tJLWtKdnlUXzZJYnNfckVnWmdDODc3S2RId25tZWpBTDdpSlRBX2FUbkp1RTVwQWhiNk9vR1JmejEzZw?oc=5",
+      "pubDate": "2026-07-06T03:07:41.000Z",
+      "snippet": "Viễn thông và kỷ nguyên lượng tử  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    }
+  ],
+  "Hội thảo khoa học": [
+    {
+      "title": "Hội thảo khoa học “Bước tiến mới trong điều trị suy tủy xương người lớn và trẻ em” - Viện Huyết học",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSENHeEFWWnRBbk1iREZqZm1GVVpZNW1aX2ZOWU9MLU85QUpXQ1RhbkRBVFVJTS1DdmFnZDR6R083TGlickhqQmpCZzVJYWZyeFFRRFZmYWJ2c0VPQ0p6UG1mMWltYmxVNExmYVZUSGFnYThQMUZGbDktUlQwd29jc2Vqcjh6TEZIVE8tNjNnWTY0a3BLSm81dFlPRDdZTTc2S3lrSk90Q0M?oc=5",
+      "pubDate": "2026-07-06T05:20:21.000Z",
+      "snippet": "Hội thảo khoa học “Bước tiến mới trong điều trị suy tủy xương người lớn và trẻ em”  Viện Huyết học - Truyền máu Trung ương",
+      "thumbnail": null,
+      "source": "Truyền máu Trung ương"
+    },
+    {
+      "title": "Hơn 130 nhà khoa học từ 29 quốc gia dự Hội thảo quốc tế về công nghệ học tập tại Việt Nam",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdGNNSV9KME1oRUhteXNQUkpOWEdEZ2tjcTd6Z1VTMGtxdE8ybVVxT09EU3YtTFJidVhkM1VtLVlZN0VNSzk4ZmJaQkNGVlB1WVowcTUtcnBHT2NYTVJHZGM2Slp2UFVncUZnSEVTUzcyVS10Nk9kQkJpeHZSU2dVUTVBTFpBMDFwSnBFOF9hZmN1Wm51SmxOSTFldG82VkJ2WEZDZkxZb2tmSTh1a2x6MTR3?oc=5",
+      "pubDate": "2026-07-06T13:56:25.000Z",
+      "snippet": "Hơn 130 nhà khoa học từ 29 quốc gia dự Hội thảo quốc tế về công nghệ học tập tại Việt Nam  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Sinh viên Trường ĐH Nguyễn Tất Thành tham gia hội thảo",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNR19aUnpEVldQbnBGYTNaZy04RGE3VFlHOHZmMjMtRFNXdXFVRG9nam9CWXFHY1hCU0pWWllERlZrSWgxVEVIZHdFcXItMEpOMnJ0b1FORGxFMHIzc21MMzVRM3E0V2VLNUtqMXhsMmNrdkRoTXJkeUp0Q2xhSHB1TnJ1ZXhwNkRDMk1Hc3FwekhTQzFBc2dBdmtFX3VrTGc4WTBmeGc4ZV9oQTZxOG9nRUk0VW9ZelljbGQ0WHhoRUVvdEtaa19zd1A2MUVXUlBVdktiYXpublpHc3JBRFNOTFV4M2NfMTZpN0RPY19oRGJUMGR3a192cXh5bjMyQkRY?oc=5",
+      "pubDate": "2026-07-06T08:48:31.000Z",
+      "snippet": "Sinh viên Trường ĐH Nguyễn Tất Thành tham gia hội thảo  Trường Đại học Nguyễn Tất Thành",
+      "thumbnail": null,
+      "source": "Trường Đại học Nguyễn Tất Thành"
+    },
+    {
+      "title": "Đại hội đại biểu Hội Khoa học Thể dục Thể thao Việt Nam lần thứ III, nhiệm kỳ 2026–2031",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQb0JsRktxdGF3V0xjT3U3Vnk4bU5md2owX3g0RUM2bVdTb290eVJQSW1XVFp4VWxvMEdkaDZSdkpyR0ROdjVESks0Mld1dXJNbV9WSHRMb1pIOE9PQ0lyRkx3WHhEZ2JlVEUxSjVXalNQSnYwdlJtRGNJTHNubWNiUktFU0VjS2hRUlM1UEVFbkNUaVlOejJ3OXVqd1JSSU5GSWhGcDl0b3Q2WklvT1ZKUlU4RjQ1OGRQbTF6Q3pVRXowcHZUNzZrRzd2Yjk?oc=5",
+      "pubDate": "2026-07-06T07:29:00.000Z",
+      "snippet": "Đại hội đại biểu Hội Khoa học Thể dục Thể thao Việt Nam lần thứ III, nhiệm kỳ 2026–2031  thethaovanhoa.vn",
+      "thumbnail": null,
+      "source": "thethaovanhoa.vn"
+    },
+    {
+      "title": "AAAP 2026: Huy động trí tuệ toàn ngành hướng tới kỳ hội nghị chăn nuôi tầm vóc quốc tế",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTE05dUhGMmpqNU9WR3lLMDJRYkxFdXhZSER6QUQtbTBHQVdCY1E3WHk3NFpuVkNNTE40UUxZbXZqRldoT3Y1RlpzRmNLbF96YnBsclczazlvNEpQTExmSDB3eV92UFZaVUFkZGh0Q1dBZ0g4WGh2OFNHR2twRHFwbXRhX1QtZzFDbURyNUNweEJWT0JJSzRmMTlJb0pNa2dJanU4c1AtWXhoWVhMQVE?oc=5",
+      "pubDate": "2026-07-05T22:31:05.000Z",
+      "snippet": "AAAP 2026: Huy động trí tuệ toàn ngành hướng tới kỳ hội nghị chăn nuôi tầm vóc quốc tế  Tạp chí Chăn nuôi Việt Nam",
+      "thumbnail": null,
+      "source": "Tạp chí Chăn nuôi Việt Nam"
+    }
+  ],
   "Hội thảo lượng tử": []
 }
