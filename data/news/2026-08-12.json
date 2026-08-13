@@ -1,5 +1,30 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Máy tính lượng tử di động đầu tiên chạy qubit kim cương",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZEFoVUxKaXpGazNMVUtDY1VXTzRuVHRrZ3ZST0d6X2RYRnBGUWlKZkNyS3FMLVdwYl9OYzBzTm5tbTJnUW5WY2kwT1RveTRsQThMckkyS3NuUlpieF9yd2t4ZkM4bDhjeWRsbnpZa1JITGlqT3p3dmtBc1YySHIyTDVKV3ZPZkxIeWlhVzR4UTNmX014R1dMTVFaQlk?oc=5",
+      "pubDate": "2026-08-12T11:45:00.000Z",
+      "snippet": "Máy tính lượng tử di động đầu tiên chạy qubit kim cương  Báo Tri thức và Cuộc sống",
+      "thumbnail": null,
+      "source": "Báo Tri thức và Cuộc sống"
+    },
+    {
+      "title": "Hàn Quốc đặt cược vào 7 công nghệ tương lai, mở rộng kỉ nguyên chip và AI",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNamVtcjR5dkRIXy1EU1hkaThnTnRkVk1xT1VMdF9XMWJzbHB0czE3MjlVUGlua1RKWkt1QnRibEVYRTIwVkk1LTlJV0VacDFLaVhyaVkzOWxYWXBMV1BwT2pldGg2cXEzUC1SM09sa01wYTNfUTBuNXBsbklBN2RxTWxCajFURFNjZFQ2NldiaEZndEJnSGRMcUtNUjNtZ2FQS1E2TDZ1MA?oc=5",
+      "pubDate": "2026-08-12T08:54:01.000Z",
+      "snippet": "Hàn Quốc đặt cược vào 7 công nghệ tương lai, mở rộng kỉ nguyên chip và AI  Một Thế Giới",
+      "thumbnail": null,
+      "source": "Một Thế Giới"
+    },
+    {
+      "title": "Quantinuum Đặt Máy Tính Lượng Tử 98-Qubit Helios Bên Trong Trung Tâm Dữ Liệu AI Của Oracle",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRU4xREc0NTFjZ2FyZ2dobFdEaU5PWHBjTTFKdFhLNUFsdTljblJZNDNQcGxFZ2Y2UF9KYy0wOEhwcU5nTUxzczJ3c0FUV0VLcUFqQnhpRHdtc2RSOTg0VzNWVE1nOW4ybVhlZTJFNTRsM1g5M2d5MHgteWIza0Q4eXR1LXB5UUp6WGc4VTBfMU9EZm1OUHdPZkdpeXFwUQ?oc=5",
+      "pubDate": "2026-08-11T20:19:52.000Z",
+      "snippet": "Quantinuum Đặt Máy Tính Lượng Tử 98-Qubit Helios Bên Trong Trung Tâm Dữ Liệu AI Của Oracle  Unite.AI",
+      "thumbnail": null,
+      "source": "Unite.AI"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "Women in Tech-Kết nối nữ khoa học với doanh nghiệp và thúc đẩy chuyển giao công nghệ",
@@ -8,6 +33,86 @@
       "snippet": "Women in Tech-Kết nối nữ khoa học với doanh nghiệp và thúc đẩy chuyển giao công nghệ  Thông tấn xã Việt Nam (TTXVN)",
       "thumbnail": null,
       "source": "Thông tấn xã Việt Nam (TTXVN)"
+    },
+    {
+      "title": "Hội thảo khoa học 'Nội tiết – chuyển hóa trong thực hành lâm sàng đa chuyên khoa'",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbm5lOHdlWi1DaS1vR1E4RmNxdVFmbHNqNmhEWk02dHlaa3EwaGYtdjQtbl9pSVBQdkVBWEJBRF9MZGVfTDZTUWdHcWpobmVjRkVhZVRMUTcxRDlZNlotaUlwT21ZQklUY1lMZVc0bU9EbkxnSVM5Y0F0dkprLTlRZmZlY1UyeFFSLXJPSGhvS3ZtM21taEI0cURsUDhzcVJLRUJJUUVwdjhJaHowLU5WeDRiY19DUGdDTnRJSGxwbkpVWVJLLWRNWjhn?oc=5",
+      "pubDate": "2026-08-12T08:27:00.000Z",
+      "snippet": "Hội thảo khoa học 'Nội tiết – chuyển hóa trong thực hành lâm sàng đa chuyên khoa'  thanglong.chinhphu.vn",
+      "thumbnail": null,
+      "source": "thanglong.chinhphu.vn"
+    },
+    {
+      "title": "Làm rõ giá trị nổi bật toàn cầu của di tích Cổ Loa, hướng tới trở thành Di sản thế giới",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNGctb3VOSUs4RmdRY3F2NThGRW55QnhpWEdMdTNCaUdScmpRVzRBZW9raXd3dWdvNERpcTNtczYzaGJzZVlMN1pNeVBxY2lrZ0RuUHVQb1BmZThPU0hnbXl0aFVneUpvYVdLQ1lnOXlBWUdJekJhdVRyOTd6a0tteGNDZTBLWVppLWhvOF9OcXh6cmZKZm96eVh0cDN6bGFRNXRyWlBoenJUc3drdW5XcFpNY1Z1RXhoZ25j?oc=5",
+      "pubDate": "2026-08-12T07:09:01.000Z",
+      "snippet": "Làm rõ giá trị nổi bật toàn cầu của di tích Cổ Loa, hướng tới trở thành Di sản thế giới  hanoimoi.vn",
+      "thumbnail": null,
+      "source": "hanoimoi.vn"
+    },
+    {
+      "title": "Hội thảo đầu tiên hướng tới lập hồ sơ trình UNESCO cho Khu di tích Cổ Loa",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVEJnQzhPQlhyR1FBZHNtZUZVOFJXU1psWkJkUkhrTFAxaVVCT1d1aHRhRE1OR09wM3lmQjJWU2NZN1FlRUN5SU5LbTVJZ19fdkV4OWxzNkRWbkJTQXNsLWFXdWJiYXF6MkFzSHp4VnNGTFJMNVgxVnVwUzlVYk93M0dJSm13XzNkS3VGUXNLY3JMZnNHWXNEY0wyNkg1eUFUOGd4Vy1tQXhuTUV4aW1MZ2wwcmVvVWNlTzA4Vg?oc=5",
+      "pubDate": "2026-08-12T13:48:00.000Z",
+      "snippet": "Hội thảo đầu tiên hướng tới lập hồ sơ trình UNESCO cho Khu di tích Cổ Loa  thethaovanhoa.vn",
+      "thumbnail": null,
+      "source": "thethaovanhoa.vn"
+    },
+    {
+      "title": "Hội thảo Bảo tồn khả năng sinh sản ở nhóm bệnh nhân ung thư trẻ",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbjV6dUFVMV9VU2dWSF9DVDZLZm5qaFZwSGZiTmJMZWJFZVJyX0VmYnpveW95TzUwVVd3TVdkeUdPQ3FhTWJaTHMwdnIwa3NqMUNJQ05sbGJTVUpGS3RNbVVfc05CS3E0RFo0Tk4zN25YMHBBaEJnZXNnX1N2NXY3SHJ2MjkzdEh4b2dBb3doRkVvRWZkMENkSnF0VExvVXA0U3U0M1NualJZSGNVMVVR?oc=5",
+      "pubDate": "2026-08-12T09:22:05.000Z",
+      "snippet": "Hội thảo Bảo tồn khả năng sinh sản ở nhóm bệnh nhân ung thư trẻ  thuonghieucongluan.com.vn",
+      "thumbnail": null,
+      "source": "thuonghieucongluan.com.vn"
+    },
+    {
+      "title": "Hội thảo khoa học “Nhận diện giá trị nổi bật toàn cầu của Khu di tích Cổ Loa\"",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVlZXRVU2ZjFDX3JDQnc0b2Zla09FTzEtcWNkVm93bVJYOFJDbkkyczJhcm11dm5abEJHSTFVbVZ4dlhLVWdEVlhtRUg5dDZaUVFOdWFsaXRlQjgwam9uTEFaSEpCUzNzRHpNbWR5T0daNmJZM3JRN3A1WFNwSERFMTZFbHg2R3pOaVJNTWt3QmNvUkk3eFBYU3NrYlB5X1k?oc=5",
+      "pubDate": "2026-08-12T11:23:24.000Z",
+      "snippet": "Hội thảo khoa học “Nhận diện giá trị nổi bật toàn cầu của Khu di tích Cổ Loa\"  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Làm rõ giá trị nổi bật toàn cầu của Cổ Loa để trình UNESCO",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSTZBOFBZb3BvQnl2RE5teUk5ZXVxTzdJcEhFNktnb1ZpMjc0T19UWWppa1JCRHFLY3VLNlN6dWtLb2cxMFRmaWE0dTRRbVpONE5JdHZkVnUwLXY3emJsalo1Y01sTGVpMTA3NUlmbTJLU3Y1enJ4TzFKRTV2T2JjUmpxR0VqQVU3UmhzZmZVeUwzX2RhRE9aS05fdTBfWU0?oc=5",
+      "pubDate": "2026-08-12T09:17:38.000Z",
+      "snippet": "Làm rõ giá trị nổi bật toàn cầu của Cổ Loa để trình UNESCO  BÁO SÀI GÒN GIẢI PHÓNG",
+      "thumbnail": null,
+      "source": "BÁO SÀI GÒN GIẢI PHÓNG"
+    },
+    {
+      "title": "Hơn 100 nhà khoa học tham dự Hội nghị quốc tế về Vi sinh vật và Một sức khỏe",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQeHY0cDlTZGxBOUNGSlc5d3pydWxHZUJORUNDaE45eVZCSWtUMGRiZEhBQXVqeHpSVS1JNEROWFhBSHpvRThyXzRuWF9VRHVXT1FBWjducjg2eXNzOXZsYi1aYlRBZHExblhZZjNqSDBkNnlBalVrWHBTSGlsWk9kWkl0TXB4UWVmX3Q0b0E5N3JtYU5TbHZHYXQ4ZWJfSzduRnd4U3Y3MlprUDA2YnVUM0xiRkExcTllZTF6U0d6Vk1DaWJkdXpuTjZqc2xEUTlpUkdHVQ?oc=5",
+      "pubDate": "2026-08-12T08:29:00.000Z",
+      "snippet": "Hơn 100 nhà khoa học tham dự Hội nghị quốc tế về Vi sinh vật và Một sức khỏe  baotintuc.vn",
+      "thumbnail": null,
+      "source": "baotintuc.vn"
+    },
+    {
+      "title": "Hơn 110 nhà khoa học dự Hội nghị Quốc tế về Vi sinh vật và Một sức khỏe lần thứ 3",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNa0dFM3J1SFlHMTFkWlRfZlE3M0hxMHgzbXBKOVRxSUhyaGdJUkJZYWp4bXBKWkl0YUp0eFBJMWR2STYxd2xacjUwdERLQjdaODBjdWQ5MUtjdVo3SXN5UzVOTEFiVlpDMUM5T2NrWWtPY2VVS1RibE1XcVhLb1p6bmY3c0lSNzNlcTNwQzAyODR4OFctNlVPTkpYcGFZeVI0U2dJQjN2VnRpRVVqdU45YWJhVWZSVFlNdVByNThUcw?oc=5",
+      "pubDate": "2026-08-12T09:54:03.000Z",
+      "snippet": "Hơn 110 nhà khoa học dự Hội nghị Quốc tế về Vi sinh vật và Một sức khỏe lần thứ 3  Báo Gia Lai điện tử",
+      "thumbnail": null,
+      "source": "Báo Gia Lai điện tử"
+    },
+    {
+      "title": "Nhận diện giá trị nổi bật toàn cầu của Khu di tích Cổ Loa",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWDNmV2VJWmRQVklPWTl5cHhZbU1wQ1lQOFlpeXY1bmlERjQ3alB6MV9NTC1jejBMYzVtdmFpNnRBczdvb1JLVDRHYmFKTjBVY05QaEhtUHYtMThGQ1NwVUVqR2MzaTdzVVYtUVNfV1g2NGUwNW5Hc0kxaDhRb181Q08yV0kxaUQtZjdBTnpWZUlLc0ExZlRIbw?oc=5",
+      "pubDate": "2026-08-12T14:23:27.000Z",
+      "snippet": "Nhận diện giá trị nổi bật toàn cầu của Khu di tích Cổ Loa  Báo Cựu Chiến Binh Việt Nam",
+      "thumbnail": null,
+      "source": "Báo Cựu Chiến Binh Việt Nam"
+    },
+    {
+      "title": "Nhiều biên bản ghi nhớ (MoU) kết nối nhà khoa học nữ với doanh nghiệp",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZjQ5RENodEtUWDFoVTg3dmF3NTEzWHVtdzQyY0JsdFVCdDFyQThkVllhNWs0VWJmZTZGTUZ2T3pxQVpSUzM0MWJ5V2QwVlczUEctWWJUSW90cEtBN3Iwand0Qm1QWFkzS0pzRTQ5dVRQajFVRHpmb0lKY252WWwxOTBCWGVPTnRyRXZTQ0Qwc3JyUURaaEIzS0FfSQ?oc=5",
+      "pubDate": "2026-08-12T08:34:01.000Z",
+      "snippet": "Nhiều biên bản ghi nhớ (MoU) kết nối nhà khoa học nữ với doanh nghiệp  Tạp chí KH&CN Việt Nam",
+      "thumbnail": null,
+      "source": "Tạp chí KH&CN Việt Nam"
     }
   ],
   "Hội thảo lượng tử": []
