@@ -1,5 +1,31 @@
 {
-  "Tính toán lượng tử": [],
-  "Hội thảo khoa học": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "GPU AMD Instinct MI430X, CPU EPYC Cung Cấp Năng Lượng cho Siêu Máy Tính LUMI‑AI trị giá 387,8 triệu",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMDM2bHdXYVhmRkN6RnBCczlZZ0RfY2dNNDBzWVZ0VGxwUnhXbWx0VW9RMG8taDVpUWZPWXNpdFhOR2ZOLUhiRW9YWFcwMXIxVzJmaWhWdUhKXzlsVXlLN2dhUURLX19vS2ZtRVV0cTRMVVRZVDE2S1lUZmxYQ012b0VfeVc1bzNaVjRsdkgzb1FSQ1Z1aHBBZWpyMA?oc=5",
+      "pubDate": "2026-08-31T15:58:55.000Z",
+      "snippet": "GPU AMD Instinct MI430X, CPU EPYC Cung Cấp Năng Lượng cho Siêu Máy Tính LUMI‑AI trị giá 387,8 triệu  unite.ai",
+      "thumbnail": null,
+      "source": "unite.ai"
+    },
+    {
+      "title": "Hàn Quốc và Mỹ mở rộng hợp tác hạt nhân, vật lý năng lượng cao",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVHVnT1l6ZjljSjVJRDZoSVl2VjhfZ191ODA4WVk1aWozWVQwdDllZzJBT3ZFSUYtRmxpRDhfWXNZcGxwdkp6QTFtdURQaWVmZkRjV0RHM2I0UTR6d3VjVmdtZEpyNG1pTDI4WUFzZVlTQ0FyLTRNelJod2hMRkU2SzhVTGFUODZmZG1mSjJrTGVFUWdrOVI1SnRxeHFGS01uc213bWdyS3NsYmVEektRYzdTSXZibzRsaHEtbHhwS1p5ZW1rdjUxc3Z4SG5IV0RJT05tX3NB?oc=5",
+      "pubDate": "2026-08-31T04:29:47.000Z",
+      "snippet": "Hàn Quốc và Mỹ mở rộng hợp tác hạt nhân, vật lý năng lượng cao  디지털투데이",
+      "thumbnail": null,
+      "source": "디지털투데이"
+    }
+  ],
+  "Hội thảo khoa học": [
+    {
+      "title": "Trường Đại học Điện lực: Thúc đẩy nghiên cứu, ứng dụng AI trong phát triển lưới điện thông minh",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeGdIZ3NMSFdSSW9XMG1qZnRUckJXWTFsWm5IMjZLaEdlTm04ZlE3M29OclN2bTQtUGx5WmpRZ1BqdVNPUzY2WlAwZU91NE1NUUhyb0MzZ0g0QVMxbWhrZ1dQM0xxTVZrVmdpdmhpV2xrbF9ZWTg3eTlTLVU2VFpCUXNXMUIxMTBxU29zdGpRWHpXaXFxR1o1dEJHWGt5aDZoYWJRUW1zeDcyV0doVkRtQ1RrX3FSOVE?oc=5",
+      "pubDate": "2026-08-31T14:54:54.000Z",
+      "snippet": "Trường Đại học Điện lực: Thúc đẩy nghiên cứu, ứng dụng AI trong phát triển lưới điện thông minh  vietnam.vn",
+      "thumbnail": null,
+      "source": "vietnam.vn"
+    }
+  ],
   "Hội thảo lượng tử": []
 }
