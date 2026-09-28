@@ -1,5 +1,22 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Cách Mỹ tăng tốc đưa lượng tử vào chiến trường trước đối thủ",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0dlZUhERDNOWmF1X0ZUazZCUVFoR19NREZZSXF1bXAtTnl2THh1M2J6dGh1bnRvUlBOU2dTbTFOSnBURV9zUXhLUk9pT01RcVNjd3lOY1pySVFNQ3dPNHdjVnNiWUlVbjhLZjgxU3RhU2xkcGIxRExGaVYxZE9lZW0wWUhNdFYtR19fVk5FSWVoTnVxUnhr?oc=5",
+      "pubDate": "2026-09-27T10:02:01.000Z",
+      "snippet": "Cách Mỹ tăng tốc đưa lượng tử vào chiến trường trước đối thủ  Một Thế Giới",
+      "thumbnail": null,
+      "source": "Một Thế Giới"
+    },
+    {
+      "title": "Lockheed Martin lập trung tâm QuIC nhằm tích hợp công nghệ lượng tử vào hệ thống quân sự",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYUFqOXAxVC0tcEpYZUtZMER5Z0EwOThITTFkUEVDM1dMNUE1c0ppaVpxWWV6ck9JeGJDYVFINWt0dEhoTTVLS2ppT0FyWTZDaVRRUlNzRVNaYS1iRDlFamRoQkFxNHJEcWtZOVdHNVBGc09BLVljeG40VTd5TW5aQlBLZ1ZvZkpkYlYzazI4eEtxQnB6QmI4YlhUN3ZsNkI1cDEweFFUSzk1cW1qWnM5Xw?oc=5",
+      "pubDate": "2026-09-27T10:33:35.000Z",
+      "snippet": "Lockheed Martin lập trung tâm QuIC nhằm tích hợp công nghệ lượng tử vào hệ thống quân sự  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "Cơ sở pháp lý, thực trạng và triển vọng phát triển bãi đỗ xe thông minh tích hợp trạm sạc điện tại Hà Nội với tầm nhìn 100 năm",
@@ -32,6 +49,46 @@
       "snippet": "Đổi mới khoa học giáo dục trong kỷ nguyên trí tuệ nhân tạo  Thương hiệu và Pháp luật",
       "thumbnail": null,
       "source": "Thương hiệu và Pháp luật"
+    },
+    {
+      "title": "Hội thảo khoa học về Sư Tổ Phổ Tụ và hành trình phát triển Sơn môn Tế Xuyên – Bảo Khám",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQb1h6STl2SFo1WGUtb2k5MjVHcHpxX19LanNPWWxGWE94TWZsdjFuWUxsSFFzZkt4ZjhnblZIRzhfLVZNQUJBTU9Id0ZlMHdSMVNiTkZYZUhnb1ZCZ2o0dTEtSnFRU2RYX1ZUc2VnWGtxMW5BVUNVQUp2N2kyOUJhOTZFSnFrNFdNbDhPVmVub3Z1WFh5TUpWcGNjaU1sVVpDSGdnZTRLV2hfeTBnWjd4SQ?oc=5",
+      "pubDate": "2026-09-27T04:45:00.000Z",
+      "snippet": "Hội thảo khoa học về Sư Tổ Phổ Tụ và hành trình phát triển Sơn môn Tế Xuyên – Bảo Khám  Phat Su Online",
+      "thumbnail": null,
+      "source": "Phat Su Online"
+    },
+    {
+      "title": "AF HANOI tổ chức Hội thảo chuyên sâu về di truyền trong y học sinh sản",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUnBnd0lxM3h5VHZKQ1pKSjU2UC1OdUxMX2RPc1gyZklGSVc1b3I3bmV6Z1lIZTdKbHI3MllQQ0c1Ymlxckt0SmVrYlZGbGZFeU5KR0J0ZWx4MWExSHNPb3lfVnJRMGxudzhCUFFvaWRjS01faGNyZUVwREE2eDFyZ3ducXljWFE5Nk9pekc4Zk54V0p1VDBiVS1WTm9YX2ZmM1ByaVpRMmpOVmtibTMxYQ?oc=5",
+      "pubDate": "2026-09-27T06:10:00.000Z",
+      "snippet": "AF HANOI tổ chức Hội thảo chuyên sâu về di truyền trong y học sinh sản  Pháp Luật Plus",
+      "thumbnail": null,
+      "source": "Pháp Luật Plus"
+    },
+    {
+      "title": "Phát huy sức mạnh trí thức ngành y vì sức khỏe nhân dân",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOdVpnVlNCMTJManhIVVNCX3FZOFNDS0NFeUZBMzB5MU9RTDFJVXM1NG85YnBuVVdWdW5sZ0dQd3l1a1lkWXpaS196VDZqVjMtQXl3dkRNUGxpblBVWUVSaXk1MXk4MGY0WDNYeG8xQ0p2S0VJZ3pXR25xVmhkZmE1N1M0ck8yZVY1UnpIamNSWGxQT2RaM0E?oc=5",
+      "pubDate": "2026-09-27T07:09:00.000Z",
+      "snippet": "Phát huy sức mạnh trí thức ngành y vì sức khỏe nhân dân  Báo Đồng Tháp",
+      "thumbnail": null,
+      "source": "Báo Đồng Tháp"
+    },
+    {
+      "title": "Bệnh viện Da liễu TPHCM đáp ứng tiêu chuẩn quốc tế, đóng góp mục tiêu nâng tầm y tế chuyên sâu",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNzVCTVVSQmVtM0ZiQkFkTVNOMkVpQlk2Y1pINFlyTWs0QW1MYkZPMjVIY1ZEaWZNMnhFc2xkOVBwTU1aQ2preU1ta0ZQQzhJOWJWNDRZQXQ2VjBGZ3Z5UldtX25Bd1pUbDVPc0NPYWFxVE1wX3JSWFJtN2lXRk1ZdmYtMDJJeXNPeF9BaWphU3VpTXFmM1dxd2lLbnpVQkctYjFzTUZ5ZTVEb1FBVHlCYjZRZXJ0OXR2QWVvdjQ2S0d1T0NoZ2hRMVdNVkZEZw?oc=5",
+      "pubDate": "2026-09-27T07:53:06.000Z",
+      "snippet": "Bệnh viện Da liễu TPHCM đáp ứng tiêu chuẩn quốc tế, đóng góp mục tiêu nâng tầm y tế chuyên sâu  BÁO SÀI GÒN GIẢI PHÓNG",
+      "thumbnail": null,
+      "source": "BÁO SÀI GÒN GIẢI PHÓNG"
+    },
+    {
+      "title": "Lâm Đồng: Làm quy trình ICM sầu riêng để nông dân dễ hiểu, dễ làm",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaHVDcUhvLWs0S1pNNlROLThFQUN2ZnNfNzNPem9XVGNTWl9Pd2NESFNhOWhsbER4RndxMTlvWUJCZnZoa1hIeGJVOGFxSmtXR08zbmRMa1JpczEyMHpJRzlDRXhSVmstdmZQNV9JYzJCMkNOa29WSFdROEtKVzVfSW8tTUloT2dXZFEzWmtWOW44R01UWmtEd3haTjVUUzh1SUN5NjBNa2NPZjJUNFJyQzI4bDhUdXk4RWZF?oc=5",
+      "pubDate": "2026-09-27T09:43:00.000Z",
+      "snippet": "Lâm Đồng: Làm quy trình ICM sầu riêng để nông dân dễ hiểu, dễ làm  hangthat.thuonghieucongluan.com.vn",
+      "thumbnail": null,
+      "source": "hangthat.thuonghieucongluan.com.vn"
     }
   ],
   "Hội thảo lượng tử": []
