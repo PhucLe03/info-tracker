@@ -1,5 +1,22 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "Universal Quantum huy động 100 triệu USD để phát triển máy tính lượng tử",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQR1I1NTdnX295Mnp6bHN5Vk1NNnlIUThWcy02b19HT2RQOUpxS01JOTFubnd0eDAtUzVNM1NrMEk3NEQ5dE96cnJRRGw4aVFiamNrdk92MEZXTTAwNms1RnBuLWlYNjNIQTVJSVVnYkpHYkVPYW1GOENxVDNFTTQzc1dOa1hhQ09ZZ0dMcXNCaFo1NW9LWmJjVXRMSjVZNHQxMGtUTTRLXzBjWmtMRnR3QmpxVUJEZVpjdWRsT1ZxWEVlWWFqd2dwSElIS1M3QQ?oc=5",
+      "pubDate": "2026-10-08T05:27:00.000Z",
+      "snippet": "Universal Quantum huy động 100 triệu USD để phát triển máy tính lượng tử  Investing.com Việt Nam",
+      "thumbnail": null,
+      "source": "Investing.com Việt Nam"
+    },
+    {
+      "title": "Europol cảnh báo rủi ro lượng tử với ví tiền mã hóa",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdzV0dkFMeDR0RUtmSC1sZzhPcFRxYjluNm5xYnNMS2hsZGdZU1dRRDZUbXViX3h0dVloQTFfUUVPYWt2dlh3QUZRQTY0TVpVbUk4OW9BMG9pdGw1MlpKRElOc3ZJcE5IS1F5S19TOEFDeW85X1VuY2h3dk5LdkNZRTFjU3RMZGVmdnBkeFJQZ3hqR3R2VHVLeXlOUVpiOGZ5WHZhTzhFRngtd1QzZGNHQ2pRbDYwN1B3ZHJ2NUhRcE8yRTZvWUxnMXRpeUVLd2pjbDBYTTZB?oc=5",
+      "pubDate": "2026-10-08T10:25:00.000Z",
+      "snippet": "Europol cảnh báo rủi ro lượng tử với ví tiền mã hóa  디지털투데이",
+      "thumbnail": null,
+      "source": "디지털투데이"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "UEF sẽ tổ chức hội thảo khoa học trẻ 2026, thúc đẩy nghiên cứu liên ngành Luật và Kinh tế",
@@ -80,7 +97,104 @@
       "snippet": "Ra mắt nền tảng thư viện số dùng chung trên điện thoại  Một Thế Giới",
       "thumbnail": null,
       "source": "Một Thế Giới"
+    },
+    {
+      "title": "Bế mạc Hội thảo khoa học quốc tế về Biển Đông lần thứ 18",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQT0ppOXB4aG1ub182MjNnZ0NHRVk1VUNJQlJjbmlENzdZcTlCLWN5b3VJQzljYWQzOHhHOXZvVHRnYzNZeklTaU5EY2w1eThfbHBmal9tWjRMcDNGS0NSUFM2RDZ0UkIwUFpKa1FmLXlYZmpoZ3N1ZGJoQk1aenNSUXdTMlY0MXlLZ201Q3IweDVkYkNxR0FHMjdqM2ZfVy01TUE?oc=5",
+      "pubDate": "2026-10-08T16:53:47.000Z",
+      "snippet": "Bế mạc Hội thảo khoa học quốc tế về Biển Đông lần thứ 18  Báo Quân đội nhân dân",
+      "thumbnail": null,
+      "source": "Báo Quân đội nhân dân"
+    },
+    {
+      "title": "Bế mạc Hội thảo khoa học quốc tế về Biển Đông lần thứ 18",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQREpnSl9USkxWYWNhbG9Fa2Nnd3NzYTBlTEc2bzlHeWFhTWNQRURKUFZBOUxTQmc3eUVFY29mU3V4dTJNMm4wRzJLdkhqb3F6N2wtbS0wM0c5Q18xdmV1TWdWbEk0X1hydVQwUXhaTEd6MElFSlJiUDJNczY1QlZ4MFdXV3czaFVWVnNUVzVFT09sbnhBbVB1SE1odkNxV0xX?oc=5",
+      "pubDate": "2026-10-08T13:20:05.000Z",
+      "snippet": "Bế mạc Hội thảo khoa học quốc tế về Biển Đông lần thứ 18  Vietnam+ (VietnamPlus)",
+      "thumbnail": null,
+      "source": "Vietnam+ (VietnamPlus)"
+    },
+    {
+      "title": "Hội thảo khoa học “Vận hành chính quyền 2 cấp ở vùng ĐBSCL hiện nay: Vấn đề đặt ra và giải pháp”",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQLXRYblpoY0V2OU90eXBVV2NrMXJEX09kWE52NXlPMjNVRnRnN05zS0REUVc2S05meDlPYVNMeENNb3Vqc2E3UkI0bzZfLXVPWTVEXzhDNTZETWZsYzV6cTdCM082QkZBdnc1bkwwcmN2QnNsSzcxN1lXNHhaS2FkcFI3NjZsZmo2cVRxc3B4WDcxRnJNc2MteVVkLXNTUDdDdmRKbUthVmljN1JiNkxSLXVUbW5BaTl2YlVvNFFDcUZrQ2N0bk9JSzBORjR6QllCZE5NUTBNZkRZZEc1?oc=5",
+      "pubDate": "2026-10-08T10:36:37.000Z",
+      "snippet": "Hội thảo khoa học “Vận hành chính quyền 2 cấp ở vùng ĐBSCL hiện nay: Vấn đề đặt ra và giải pháp”  Báo Vĩnh Long",
+      "thumbnail": null,
+      "source": "Báo Vĩnh Long"
+    },
+    {
+      "title": "Hội thảo khoa học về bảo tồn và phát huy giá trị Thành cổ Diên Khánh",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTDFta3RjSXRvTHNSWnI4VEU2dy1sai1tUEY1TmZGTzBVaHpnb3ZucEhILUNBSlo2M1cxaXJCOGhYVEZIMlhJVGJ4OEg2aGo1V1d2anI1ZDdKRTlWYTlYM0JhOGZWWnRpam5EdnJzcUpQNlItU3NsYTFUWF81ZlJQWFVqRVdJUllkTFlCdDlpZW1TSnpMNXc?oc=5",
+      "pubDate": "2026-10-08T12:19:44.000Z",
+      "snippet": "Hội thảo khoa học về bảo tồn và phát huy giá trị Thành cổ Diên Khánh  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Hội nghị Khoa học và Công nghệ hạt nhân cán bộ trẻ ngành năng lượng nguyên tử lần thứ IX",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOc1ZTdTdIUVhOV19FLUgyMU9fR0ktWEtiV2Qyd3doZEFpN0l1Q0ZuQ3ZqWFpINGdzNEpZcThkLTMxMVZ2aDROVG9zNGpYNDNvaVhDbzRCQ1MycXYyOVJQbGNocWVBNFV2bFBjMG1xQmFqUmVqak9aZ1RndGExMGtMeXFZODFrS19lOEt2ekw1VzhQVHZnUXpoajZyRENvckdZa3c5SzhhcTFqN2FKY0NrOGJfVW8zLUdwSEpwdm04NF9lVmhjekE?oc=5",
+      "pubDate": "2026-10-08T06:03:46.000Z",
+      "snippet": "Hội nghị Khoa học và Công nghệ hạt nhân cán bộ trẻ ngành năng lượng nguyên tử lần thứ IX  Năng lượng Việt Nam Online",
+      "thumbnail": null,
+      "source": "Năng lượng Việt Nam Online"
+    },
+    {
+      "title": "Hải Phòng tổ chức Hội thảo “Dữ liệu cho AI - Từ nền tảngđến ứng dụng”",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZXFEeER3bTRxVHAyekdwVVduTEZseldQSXh2cDhzbk1JVW03ZnotWDhZVXJJUGowdUhranN0N01uNjdpRjlobHhvTFhRRHNIY1lhT3FCTEdtQmhpYUtBU0pZV29FOHVpNUItdWFmbjMzUVZNUUJ0c2dMcFJTTUN5YVZyMmRPT09aRE16aTEzYmNwT1Z4Qnhkd3lkVQ?oc=5",
+      "pubDate": "2026-10-08T14:57:00.000Z",
+      "snippet": "Hải Phòng tổ chức Hội thảo “Dữ liệu cho AI - Từ nền tảngđến ứng dụng”  An ninh Hải Phòng",
+      "thumbnail": null,
+      "source": "An ninh Hải Phòng"
+    },
+    {
+      "title": "Bế mạc Hội nghị lần thứ tư Ban Chấp hành Trung ương Đảng khóa XIV",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcGpHMWc4QXZfX0lmUThvQzVfQTBfMGQxSGI1eDJIU21SUjVCOVpkUDB3Qk9FaURSUEJCUWwtNEdTUV84MTF4Q1ZMbVNEakFXV3BwX1BSMHdTWWNsOUI2TGxzSXJuTXJvS19NMU5NTlM3V0tjazhWMlFoT1B4TVZkUmVLN1FvVkJ5a1FHOG9KWVN0TEdwRjRWeTBWWEtoM3hEY0lwbl9n?oc=5",
+      "pubDate": "2026-10-08T14:34:00.000Z",
+      "snippet": "Bế mạc Hội nghị lần thứ tư Ban Chấp hành Trung ương Đảng khóa XIV  Học viện Chính trị CAND",
+      "thumbnail": null,
+      "source": "Học viện Chính trị CAND"
+    },
+    {
+      "title": "Thông báo Hội nghị lần thứ tư Ban Chấp hành Trung ương Đảng khóa XIV",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcXV4TVZNbFptSW9ZTnlTcHlBcktqalNyNTdDS2FpUTFxY2RGdzdBWlRsRkp0WHBxMU1LazdUdmJrUXExNE9rdFBObmxEVEs5YUxiVzRuUzV5NFgxNVk5MjZ2N2VxNmkyb2pSU2RRamI0cTBSbzZEcXpkLVhBcDh0QmJXd0o2b2VIcWpHbWY1VnJrWlpqM2VVV1BB?oc=5",
+      "pubDate": "2026-10-08T13:24:00.000Z",
+      "snippet": "Thông báo Hội nghị lần thứ tư Ban Chấp hành Trung ương Đảng khóa XIV  Học viện Chính trị Quốc gia",
+      "thumbnail": null,
+      "source": "Học viện Chính trị Quốc gia"
+    },
+    {
+      "title": "Xây dựng hệ thống luật lệ, thúc đẩy hợp tác thực chất tại Biển Đông",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObHA5VDdwNGZVYVFELVJDLWFrblNGQ1gxM0IxODV1N2IyZUR0UDRHeWFpTzB0NG1NMFJwT1puU3BHamE0eFdyN2w0R1JPVjg3NTNUY1lSOHRlbDZGdlhjcmRFU3g4VEQwWnFXbWpxbGlfcXBLMF9kNUJzOXhnTm9KY3FuV21fdElHQlZiMG5ZYTdhbXhlNW94ZnJidW1Sa0lYbkVlODFfOGdFZw?oc=5",
+      "pubDate": "2026-10-08T13:55:44.000Z",
+      "snippet": "Xây dựng hệ thống luật lệ, thúc đẩy hợp tác thực chất tại Biển Đông  BÁO SÀI GÒN GIẢI PHÓNG",
+      "thumbnail": null,
+      "source": "BÁO SÀI GÒN GIẢI PHÓNG"
+    },
+    {
+      "title": "Khai mạc Hội nghị khoa học quốc gia về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin - FAIR’2026",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQTWY5U25PWUNweF9QYldacVctdHlQVU9mR1owYk5oUTVJUmFONXhaVE9VWlNROTdLcGNGU29nMWVEM1pmWU1Eb0pZNVN3ZmEyODJiRUZGbmpHYTdKWENiQXY4MXk1NDg0andDZ2JqZDJIWk01Umw1ci0zVVpCVjZlQ01zSm83SDBwMkxncFRMenlqOHIzaDF5T3JGUl9QYlB4M1ZzODBXQVlTOFJ3Z1ZFZHJ4NDdsb3FjYy1NQ0d0ZmVZNHNjaENfbHVGR2hjQlE?oc=5",
+      "pubDate": "2026-10-08T09:11:37.000Z",
+      "snippet": "Khai mạc Hội nghị khoa học quốc gia về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin - FAIR’2026  Giáo dục Việt Nam",
+      "thumbnail": null,
+      "source": "Giáo dục Việt Nam"
     }
   ],
-  "Hội thảo lượng tử": []
+  "Hội thảo lượng tử": [
+    {
+      "title": "Hội thảo Dữ liệu cho AI - Từ nền tảng đến ứng dụng",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcWlpR3pSbkl4eWR0TXItRlhvSUM4NUR0dFd4azNrZFRtQlEwQVltOXZNYXZDM2tqMjRjTmpWYi16bHA3Q1l3UC1FZ0h0Z090Nk1TRElsWmxQbHlMekRmTG1xcVZfamNBY0pfWEFCazU0T2N3N2Q1bTZTNXZzd0dXOEp0OGRfOW8talVnS2o3bDF1b1FSdkdIc2RXMDFjMzZLZXE1cnFn?oc=5",
+      "pubDate": "2026-10-08T11:00:08.000Z",
+      "snippet": "Hội thảo Dữ liệu cho AI - Từ nền tảng đến ứng dụng  dangcongsan.vn",
+      "thumbnail": null,
+      "source": "dangcongsan.vn"
+    },
+    {
+      "title": "Vietnamul trebuie să își accelereze stăpânirea tehnologiei și să se dezvolte prin cunoaștere.",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZU5yYXlQNVBMS0dJeE4yUFNnajRnU0NwSFJvaWxreXdvaUJZZnR0UkZFZkdfRzZnUWtSdjNQTkZOYThWQVJ4UHRKUTZ6YlVHa2FyZHlSMDl4Ym1LaTdyMnJ2RV8wYTB2ZUVPVi1JMmtYYy1fR3p2N09IOWJZekhTTFRXdHY2ZUNLeXBwYUducFV6dGxj?oc=5",
+      "pubDate": "2026-10-08T15:54:57.000Z",
+      "snippet": "Vietnamul trebuie să își accelereze stăpânirea tehnologiei și să se dezvolte prin cunoaștere.  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    }
+  ]
 }
