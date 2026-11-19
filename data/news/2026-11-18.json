@@ -1,5 +1,14 @@
 {
-  "Tính toán lượng tử": [],
+  "Tính toán lượng tử": [
+    {
+      "title": "NVIDIA mở rộng Slurm, đưa máy tính lượng tử vào hệ thống siêu máy tính",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOT2RZdWJpOEJRMkUtcjFJUXZ5c3NINWItZzd1WXF0Z3hjZlBKc2VhUWVDbnl2a1ladkNVSmFiSWFoNkNHMHFLUVJ1WGJOaS1mVnZhLXhYbVlqTzdsZmo0dk1VMy1MZkNtT1JjSEZJTWZWSTVOUTE4Wjg2TV9ya2VnT0stcjBTQmZFWXhzTjl4TjVXcWNkOWR4aGxGX3g3RDIwUEladmlsbm5CZw?oc=5",
+      "pubDate": "2026-11-18T06:50:12.000Z",
+      "snippet": "NVIDIA mở rộng Slurm, đưa máy tính lượng tử vào hệ thống siêu máy tính  VnEconomy",
+      "thumbnail": null,
+      "source": "VnEconomy"
+    }
+  ],
   "Hội thảo khoa học": [
     {
       "title": "Bảo đảm an ninh dữ liệu trong kỷ nguyên số",
@@ -80,6 +89,86 @@
       "snippet": "Tạp chí Pháp luật và Phát triển chúc mừng các cơ sở đào tạo luật nhân dịp 20/11  https://phapluatphattrien.vn/",
       "thumbnail": null,
       "source": "https://phapluatphattrien.vn/"
+    },
+    {
+      "title": "Hội thảo khoa học quốc tế về truyền thông và công nghiệp sáng tạo",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZ0hQX0ZRMDNaR3p3UFZERUloVWFyQWI5bEEwV05jbXZkVDlDMDFiOXZmUlp5MFVMT2ZHRXdqSUU1TWxrVHdEaG9BZklDdW5pUDFfejhRV2RiNWVRV09Ndl9QVDd1XzhKaktEOHZGVjQ1UHFPS1lIdjRPNXh0RHFMekhsYmtjR2h0RFZjSzhXeHNSUWd6b2FNd2c4aGFXclZuQndBTnYzTFR5OTBvTm1rZHF3bw?oc=5",
+      "pubDate": "2026-11-18T11:18:00.000Z",
+      "snippet": "Hội thảo khoa học quốc tế về truyền thông và công nghiệp sáng tạo  VOV2",
+      "thumbnail": null,
+      "source": "VOV2"
+    },
+    {
+      "title": "Hội thảo khoa học Hải Phòng mở đầu cuộc kháng chiến chống thực dân Pháp xâm lược ở miền Bắc – Tầm vóc và ý nghĩa lịch sử",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNdkFRMXlDTGR2dG9rLTJDc1J2dnhBNWNKV0NZS1ZpN2lWc2R0VGxTV1VRa3hFN0J2eEd3cGtsVmo4RGVmTzYzX2FvU2hZR0Z1dDZkc2d6dHAzU3pCVHpNbFdoTUh2QW85VHNHS3pTUjJyU291d19RZm5BTENuYUxmV2ZtMlJZTkZMcUdVQmg4WFZZWHhrb0NxREZwNEd2NWhvWFVZeVA1dlVzWnY1RDA0Zk9jVDlyUGFOZG5RQzVqMlpSa0VoYzhaMHJ2b2RpYmd4NENneWlnVU1fdkR2NUN4Xw?oc=5",
+      "pubDate": "2026-11-18T08:56:00.000Z",
+      "snippet": "Hội thảo khoa học Hải Phòng mở đầu cuộc kháng chiến chống thực dân Pháp xâm lược ở miền Bắc – Tầm vóc và ý nghĩa lịch sử  An ninh Hải Phòng",
+      "thumbnail": null,
+      "source": "An ninh Hải Phòng"
+    },
+    {
+      "title": "Giáo dục để đưa sáng tạo vượt khỏi giới hạn của AI",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbF9iYXFjYnFZa04wbDV3SXEwX29yYVJCUTh5ZUk4VVA4eDJBNXJsdFJZVkdwUHJ2azVxS0dLWFJSUjVlZ0JSM25sT294YjZjbFdHT0I4aWlhdWN2OUFxUld5a3M1REZmc0Npb1F5V0VTbnRBc2JLSUpWbmNBWWxQNng0WkExRkZTcDgzYmF2QQ?oc=5",
+      "pubDate": "2026-11-18T15:23:10.000Z",
+      "snippet": "Giáo dục để đưa sáng tạo vượt khỏi giới hạn của AI  Báo Nhân Dân điện tử",
+      "thumbnail": null,
+      "source": "Báo Nhân Dân điện tử"
+    },
+    {
+      "title": "Hội thảo khoa học 40 năm đổi mới chính sách văn hóa",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNM0JaY2otRG1DZXpsX1VEZ0IzOVdpSGx6TnVmYjZDd2NLOTBuTDF4UFJuT3lLRlBCNGJQVWlvWkpWalFuQVlNLXBUb1o1TDVKa3QxMVFhS1lzQm5HVXltdVpBZzFFVzl5NDc3Z2l6NGJsY01mOF9JN0t0ZVNZc1NvZl93OUlPZnFaNEZz?oc=5",
+      "pubDate": "2026-11-18T08:40:09.000Z",
+      "snippet": "Hội thảo khoa học 40 năm đổi mới chính sách văn hóa  Báo Quân đội nhân dân",
+      "thumbnail": null,
+      "source": "Báo Quân đội nhân dân"
+    },
+    {
+      "title": "Hội thảo khoa học Hải Phòng mở đầu cuộc kháng chiến chống thực dân Pháp xâm lược ở miền Bắc - Tầm vóc và ý nghĩa lịch sử",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQT1dRV25TRWdicUg0YXQwLUZSQmhZQlo5d0x1SVItdGJGeGI5eXY1SGV0QVlfOGdCYmpPTkhHWWNRVFoyQlNmOExDQmE2VVc1aTA3c3drc21PVFNfWVgzTHM4aHRId1Z3Q2oxRm5Ya19vY3E3YXN3QUh1SFBTRWtscEV4TlVKSEY5ZXE4ajFaTnJ4ZVVQQko3b2owLVU4d3prME9LQ1BWWXdWUEMxY3NZTVljNjNhVkZsWUVpMlJ3YzhVUmd3dWtNcWZNSlVXM3BaWWFFWXhEWTA?oc=5",
+      "pubDate": "2026-11-18T04:39:00.000Z",
+      "snippet": "Hội thảo khoa học Hải Phòng mở đầu cuộc kháng chiến chống thực dân Pháp xâm lược ở miền Bắc - Tầm vóc và ý nghĩa lịch sử  UBND thành phố Hải Phòng",
+      "thumbnail": null,
+      "source": "UBND thành phố Hải Phòng"
+    },
+    {
+      "title": "Đổi mới mô hình phát triển: Để văn hóa thấm sâu vào đời sống",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPM2RGWEFRUWNrMkliN2Q5cWQyNmlYVlVmdUJKRWtXemlYU3pncXBIaFZxU2RNMElHTHhWdWRkTHZrVGxUMmZVYW5zN3l3a0VGLU0xRVFSaDFyS0NfVVhlcE9OX19DVmZxM1RvVGRfdkNYbjlubUE2UTZ2b0dDdFRjZS0yT1lMWVVISWZIOFdOSko4QkNRMGh1T3RrakYxSERJb1FBenVibw?oc=5",
+      "pubDate": "2026-11-18T07:25:49.000Z",
+      "snippet": "Đổi mới mô hình phát triển: Để văn hóa thấm sâu vào đời sống  bvhttdl.gov.vn",
+      "thumbnail": null,
+      "source": "bvhttdl.gov.vn"
+    },
+    {
+      "title": "Hội thảo Dân tộc học và Tôn giáo học thường niên năm 2026",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYXlleDFHVHdLSmoxUEdwVHNERUsyMFd4eFgzRTM4MGRGUS1JZk1GLTltRHJ6Ui1kWnFoTWF0Y2cxTTZtZjhIYjdsR1VXZmtSY3ZyNHZibVplVlA1d3Y3RmFxWWhXUDhsNjhEY2hzNk1qbVJ6VUJQc2sxZ0pBWXR1dVRwN2cxZkk?oc=5",
+      "pubDate": "2026-11-18T14:41:44.000Z",
+      "snippet": "Hội thảo Dân tộc học và Tôn giáo học thường niên năm 2026  Vietnam.vn",
+      "thumbnail": null,
+      "source": "Vietnam.vn"
+    },
+    {
+      "title": "Trường đại học đồng hành phát triển thị trường chứng khoán Việt Nam",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWWJydHVVVDRsMDlESDd5OEYwV0hzZ1NiVWpKUWhWSHdtMUF4bmM1NHJZenAyM3ROelM3MnVIWjVUYm5MSVk2Ukg0ckZyYUV5SUFwdEtIREJZek55S2NVUmR4R1RhV3pVY2E4aGRpOHF2Tk0zTlg1bjVyWVdHQzNzT2xHcWRzSXZhelFxUHhSZVgtYnVtdkJZNXpScmtPN0hsbG5USnhTRTl6SDg?oc=5",
+      "pubDate": "2026-11-18T12:25:43.000Z",
+      "snippet": "Trường đại học đồng hành phát triển thị trường chứng khoán Việt Nam  BÁO SÀI GÒN GIẢI PHÓNG",
+      "thumbnail": null,
+      "source": "BÁO SÀI GÒN GIẢI PHÓNG"
+    },
+    {
+      "title": "Chính quyền hai cấp, chuyển đổi số đặt ra vấn đề mới về dân tộc, tôn giáo",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWUdvZUVVMHdUb2dsX0lvMTF0VW03cWZZYWt2TkFzS0pzOFIzbDhPeHNISm44YmNZT2N5VDhJV1g3c0daY0s1NnZiUXRnVkgxeGhyOU5ZZ1RYNVNkMk10UVltTmd5TE9iMzZSQVRCSnVkOGNjRjZJSUhmbmZSUDY5Wm5XWUFCdk42dS00aFVpMmRrbDE2TjVjZ0gzWHZQOHU5QzFndWpjOWhoZDB3bmNFdkxvTldjZWJIQ1ZxWA?oc=5",
+      "pubDate": "2026-11-18T08:39:01.000Z",
+      "snippet": "Chính quyền hai cấp, chuyển đổi số đặt ra vấn đề mới về dân tộc, tôn giáo  Dân tộc và Phát triển",
+      "thumbnail": null,
+      "source": "Dân tộc và Phát triển"
+    },
+    {
+      "title": "Bệnh viện Đa khoa Long An tổ chức hội nghị khoa học kỹ thuật thường niên lần thứ II",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZFpDa1RmMTNGdlgyQmF0RG9KT3g3OVk1bmtyQmVJSnY0TlplOWNIbzA3cHFXVmRlNlJrZTlZT25UQjlUZHZfWklBbFY4a2UtajBZSU1UUEtiUUlIQmd2UTVrVjZ0UmxZMGxnWG1DWDJ3enppbHhKWlVHdjk2Nk1sanN1ZExxMGZ2NWcw?oc=5",
+      "pubDate": "2026-11-18T07:11:24.000Z",
+      "snippet": "Bệnh viện Đa khoa Long An tổ chức hội nghị khoa học kỹ thuật thường niên lần thứ II  Báo và phát thanh, truyền hình Tây Ninh",
+      "thumbnail": null,
+      "source": "Báo và phát thanh, truyền hình Tây Ninh"
     }
   ],
   "Hội thảo lượng tử": [
